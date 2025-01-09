@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Link from 'next/link';
+import authurize from '@/lib/auth';
 
 function Profile() {
   const router = useRouter();
@@ -221,4 +222,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default authurize(Profile);

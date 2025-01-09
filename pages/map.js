@@ -1,5 +1,6 @@
 import { useRef, useEffect } from "react";
 import Head from "next/head";
+import authurize from "@/lib/auth";
 
 function Map() {
   const mapContainerRef = useRef(null);
@@ -7,6 +8,7 @@ function Map() {
   useEffect(() => {
     // จำลองตำแหน่งตัวอย่างสำหรับการแสดงแผนที่
     const exampleLocation = { lat: 13.736717, lng: 100.523186 }; // พิกัดกรุงเทพฯ
+    const exampleLocation2 = { lat: 13.735717, lng: 100.522186 }; // พิกัดกรุงเทพฯ
 
     if (typeof window !== "undefined" && window.google) {
       const map = new window.google.maps.Map(mapContainerRef.current, {
@@ -17,6 +19,12 @@ function Map() {
       // เพิ่ม marker ที่พิกัดตัวอย่าง
       new window.google.maps.Marker({
         position: exampleLocation,
+        map: map,
+        title: "ตำแหน่งตัวอย่าง",
+      });
+       
+      new window.google.maps.Marker({
+        position: exampleLocation2,
         map: map,
         title: "ตำแหน่งตัวอย่าง",
       });
@@ -46,4 +54,4 @@ function Map() {
   );
 }
 
-export default Map;
+export default authurize(Map);

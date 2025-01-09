@@ -1,8 +1,13 @@
+"use client";
 import { useEffect, useRef, useState } from "react";
 import Head from "next/head";
 import Link from "next/link"; // import Link from Next.js
+import { useRouter } from "next/router";
+import redirect_login from "@/lib/redirect_login";
+import { useToast } from "@/hooks/use-toast";
+import { Toaster } from "@/components/ui/toaster";
 
-export default function Register() {
+function Register() {
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -10,10 +15,12 @@ export default function Register() {
     latitude: "",
     longitude: "",
   });
+
   const mapRef = useRef(null);
   const markerRef = useRef(null);
   const searchBoxRef = useRef(null);
-
+  const router = useRouter();
+  const { toast } = useToast();
   useEffect(() => {
     // Google Map
     if (typeof window !== "undefined" && window.google) {
@@ -94,11 +101,42 @@ export default function Register() {
   };
 
   // Placeholder function for form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("ระบบยังไม่พร้อมใช้งาน กรุณาลองใหม่ในภายหลัง");
+ 
+    const res = await fetch("http://localhost/durian/database/register.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: formData.username,
+        email: formData.email,
+        password: formData.password,
+        latitude: formData.longitude,
+        longitude: formData.longitude,
+      }),
+    });
+
+    const data = await res.json();
+    
+    if (res.ok) {
+      router.push("/login");
+    } else if (res.status == 409) {
+      toast({
+        title: "แจ้งเตือน",
+        description: "ชื่อผู้ใช้ซ้ำ",
+      })
+      console.log(data);
+    } else {
+      toast({
+        title: "แจ้งเตือน",
+        description: "ไม่สามารถสมัครสมาชิกได้",
+      })
+    }
   };
 
+
+
+  
   return (
     <>
       <Head>
@@ -116,7 +154,9 @@ export default function Register() {
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* ฟอร์ม */}
           <div className="space-y-2">
-            <label className="block text-lg font-medium text-gray-600">ชื่อ</label>
+            <label className="block text-lg font-medium text-gray-600">
+              ชื่อ
+            </label>
             <input
               type="text"
               name="username"
@@ -128,7 +168,9 @@ export default function Register() {
           </div>
 
           <div className="space-y-2">
-            <label className="block text-lg font-medium text-gray-600">อีเมล</label>
+            <label className="block text-lg font-medium text-gray-600">
+              อีเมล
+            </label>
             <input
               type="email"
               name="email"
@@ -140,7 +182,9 @@ export default function Register() {
           </div>
 
           <div className="space-y-2">
-            <label className="block text-lg font-medium text-gray-600">รหัสผ่าน</label>
+            <label className="block text-lg font-medium text-gray-600">
+              รหัสผ่าน
+            </label>
             <input
               type="password"
               name="password"
@@ -152,7 +196,9 @@ export default function Register() {
           </div>
 
           <div className="space-y-2">
-            <label className="block text-lg font-medium text-gray-600">ค้นหา</label>
+            <label className="block text-lg font-medium text-gray-600">
+              ค้นหา
+            </label>
             <input
               ref={searchBoxRef}
               type="text"
@@ -162,7 +208,9 @@ export default function Register() {
           </div>
 
           <div className="space-y-2">
-            <label className="block text-lg font-medium text-gray-600">ปักตำแหน่งสวน</label>
+            <label className="block text-lg font-medium text-gray-600">
+              ปักตำแหน่งสวน
+            </label>
             <div
               ref={mapRef}
               className="w-full h-96 border rounded-md bg-gray-100"
@@ -170,7 +218,9 @@ export default function Register() {
           </div>
 
           <div className="space-y-2">
-            <label className="block text-lg font-medium text-gray-600">ละติจูด</label>
+            <label className="block text-lg font-medium text-gray-600">
+              ละติจูด
+            </label>
             <input
               type="text"
               name="latitude"
@@ -181,7 +231,9 @@ export default function Register() {
           </div>
 
           <div className="space-y-2">
-            <label className="block text-lg font-medium text-gray-600">ลองจิจูด</label>
+            <label className="block text-lg font-medium text-gray-600">
+              ลองจิจูด
+            </label>
             <input
               type="text"
               name="longitude"
@@ -198,6 +250,7 @@ export default function Register() {
             >
               สมัครสมาชิก
             </button>
+           
           </div>
         </form>
 
@@ -207,6 +260,9 @@ export default function Register() {
           </Link>
         </div>
       </div>
+      <Toaster/>
     </>
   );
 }
+
+export default redirect_login(Register);

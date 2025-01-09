@@ -1,21 +1,46 @@
 import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link"; // import Link from Next.js
+import redirect_login from "@/lib/redirect_login";
+import { useRouter } from "next/router";
 
-export default function Login() {
+
+
+const Login = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
-
+  const router = useRouter();
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     // Logic for backend interaction will be implemented later
-    console.log("Form submitted", formData);
+    // console.log("Form submitted", formData);
+    const res = await fetch('http://localhost/durian/database/login.php',{
+      method:"POST",
+      headers:{"Content-Type" : "application/json" },
+      body: JSON.stringify({
+        email:formData.email,
+        password:formData.password 
+      })
+    });
+
+    if(res.ok){
+      const data = await res.json();
+      console.log(data);
+      localStorage.setItem("userId", data.userId);
+      alert("ล็อกอินสำเร็จ");
+      router.push('/');
+    }else{
+      const data = await res.json();
+      console.log(data);
+      alert("อีเมลหรือรหัสผ่านไม่ถูกต้อง");
+    }
+
   };
 
   return (
@@ -44,6 +69,7 @@ export default function Login() {
                 className="w-full border border-gray-300 p-2 rounded-lg"
               />
             </div>
+            
             <div className="mb-4">
               <label className="block text-gray-700 mb-2">รหัสผ่าน</label>
               <input
@@ -73,3 +99,5 @@ export default function Login() {
     </>
   );
 }
+
+export default redirect_login(Login);

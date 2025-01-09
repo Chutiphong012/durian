@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import Head from 'next/head';
+import authurize from "@/lib/auth";
 
-export default function Home() {
+const Home = () => {
   const [province, setProvince] = useState("กรุงเทพมหานคร");
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState({});
@@ -136,3 +137,5 @@ export default function Home() {
     </>
   );
 }
+
+export default Home;
