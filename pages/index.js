@@ -110,7 +110,7 @@ export default function Home() {
           <div>
             {Object.entries(forecast).map(([date, forecasts], index) => (
               <div key={index} className="mb-6">
-                <h2 className="text-xl font-bold mb-2">{formatDate(date)}</h2>
+                <h2 className="text-3xl font-bold mb-2 text-white">{formatDate(date)}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {forecasts.map((item, idx) => (
                     <div key={idx} className="border rounded-lg p-4 shadow-md text-black bg1">
