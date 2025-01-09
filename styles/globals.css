@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  background: linear-gradient(135deg, #1e2f25, #567361, #91a99b, #cccdd2, #e5e4ea);
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  background-attachment: fixed;
+  background-size: cover;
+  
+}
+
+nav,footer,.bg1{
+  background: linear-gradient(135deg, #cccdd2, #e5e4ea);
+}
+
+
+
+
