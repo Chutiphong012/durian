@@ -2,8 +2,7 @@ import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <nav
-      className="p-3 cd mx-4 my-2 rounded-2xl shadow-md">
+    <nav className="p-3 cd mx-4 my-2 rounded-2xl shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* ด้านซ้าย */}
         <div className="flex space-x-4 md:space-x-6">
@@ -20,16 +19,15 @@ export default function Navbar() {
             </svg>
           </Link>
           {/* ลิงก์เมนู */}
-          <Link href="/" className="text-black hover:text-red-500 text-sm md:text-base">
+          <Link href="/" className="text-black hover:text-red-500 text-lg md:text-xl">
             หน้าหลัก
           </Link>
-          <Link href="/analyze" className="text-black hover:text-red-500 text-sm md:text-base">
+          <Link href="/analyze" className="text-black hover:text-red-500 text-lg md:text-xl">
             วิเคราะห์โรค
           </Link>
-          <Link href="/map" className="text-black hover:text-red-500 text-sm md:text-base">
-          แสดงตำแหน่งโรค
+          <Link href="/map" className="text-black hover:text-red-500 text-lg md:text-xl">
+            แสดงตำแหน่งโรค
           </Link>
-          
         </div>
         {/* ด้านขวา */}
         <div>

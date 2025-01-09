@@ -3,17 +3,27 @@ import Head from 'next/head';
 
 export default function Home() {
   const [province, setProvince] = useState("กรุงเทพมหานคร");
-  const [provinces, setProvinces] = useState(["กรุงเทพมหานคร", "เชียงใหม่", "ภูเก็ต"]);
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState({});
   const [loading, setLoading] = useState(false);
   const [loadingCurrent, setLoadingCurrent] = useState(false);
+  const [provinces, setProvinces] = useState([
+    "กรุงเทพมหานคร", "กระบี่", "กาญจนบุรี", "กาฬสินธุ์", "กำแพงเพชร", "ขอนแก่น", "จันทบุรี", 
+    "ฉะเชิงเทรา", "ชัยนาท", "ชัยภูมิ", "ชุมพร", "ชลบุรี", "เชียงใหม่", "เชียงราย", "นครนายก", 
+    "นครปฐม", "นครพนม", "นครราชสีมา", "นครศรีธรรมราช", "นนทบุรี", "นราธิวาส", "หนองคาย", 
+    "หนองบัวลำภู", "อยุธยา", "อุดรธานี", "อุตรดิตถ์", "อุบลราชธานี", "ประจวบคีรีขันธ์", 
+    "ปราจีนบุรี", "ปัตตานี", "พระนครศรีอยุธยา", "พะเยา", "เพชรบุรี", "เพชรบูรณ์", "แม่ฮ่องสอน", 
+    "ยะลา", "ยโสธร", "ระนอง", "ระยอง", "ราชบุรี", "ลพบุรี", "ลำปาง", "ลำพูน", "เลย", "ศรีสะเกษ", 
+    "สกลนคร", "สงขลา", "สมุทรปราการ", "สมุทรสงคราม", "สมุทรสาคร", "สระแก้ว", "สระบุรี", 
+    "สิงห์บุรี", "สุโขทัย", "สุพรรณบุรี", "สุราษฎร์ธานี", "สุรินทร์", "สตูล", "สงขลา", "สุราษฎร์ธานี", 
+    "อำนาจเจริญ", "อุดรธานี", "อุบลราชธานี", "พัทลุง"
+  ]);
+  
 
   useEffect(() => {
     // Fetch current weather when province changes
     setLoadingCurrent(true);
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${province}&units=metric&lang=th&appid=${process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY}`)
-
       .then((res) => res.json())
       .then((data) => {
         setCurrentWeather(data);
@@ -52,7 +62,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      <h1 className="text-center text-2xl md:text-4xl font-bold py-4 px-4 text-white">
+      <h1 className="text-center text-3xl md:text-5xl font-bold py-4 px-4 text-white">
         Durian Epidemic Geospatial Report System
       </h1>
 
@@ -61,7 +71,7 @@ export default function Home() {
           <select
             value={province}
             onChange={(e) => setProvince(e.target.value)}
-            className="border border-gray-300 rounded-lg p-2 text-sm md:text-base text-black"
+            className="border border-gray-300 rounded-lg p-2 text-lg md:text-xl text-black"
           >
             {provinces.map((prov) => (
               <option key={prov} value={prov}>
@@ -72,46 +82,42 @@ export default function Home() {
         </div>
 
         {loadingCurrent ? (
-  <p className="text-center">กำลังโหลดข้อมูลสภาพอากาศขณะนี้...</p>
-) : currentWeather && currentWeather.main ? (
-  <div className="mb-6 border rounded-lg p-4 shadow-md text-black bg1 max-w-md">
-    <h2 className="text-lg font-bold mb-2">สภาพอากาศขณะนี้</h2>
-    <p>📍 จังหวัด: {currentWeather.name}</p>
-    <p>🌡️ อุณหภูมิ: {currentWeather.main.temp} °C</p>
-    <p>💧 ความชื้น: {currentWeather.main.humidity}%</p>
-    <p>🌥️ สภาพอากาศ: {currentWeather.weather[0].description}</p>
-    <div className="flex justify-center items-center">
-      <img
-        src={`http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png`}
-        alt={currentWeather.weather[0].description}
-        className="w-12 h-12"
-      />
-    </div>
-  </div>
-) : (
-  <p className="text-center">ไม่พบข้อมูลสภาพอากาศขณะนี้</p>
-)}
-
+          <p className="text-center text-lg md:text-xl">กำลังโหลดข้อมูลสภาพอากาศขณะนี้...</p>
+        ) : currentWeather && currentWeather.main ? (
+          <div className="mb-6 border rounded-lg p-4 shadow-md text-black bg1 max-w-md">
+            <h2 className="text-xl font-bold mb-2">สภาพอากาศขณะนี้</h2>
+            <p className="text-lg md:text-xl">🚩 จังหวัด: {currentWeather.name}</p>
+            <p className="text-lg md:text-xl">🌡️ อุณหภูมิ: {currentWeather.main.temp} °C</p>
+            <p className="text-lg md:text-xl">💧 ความชื้น: {currentWeather.main.humidity}%</p>
+            <p className="text-lg md:text-xl">🌥️ สภาพอากาศ: {currentWeather.weather[0].description}</p>
+            <div className="flex justify-center items-center">
+              <img
+                src={`http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png`}
+                alt={currentWeather.weather[0].description}
+                className="w-12 h-12"
+              />
+            </div>
+          </div>
+        ) : (
+          <p className="text-center text-lg md:text-xl">ไม่พบข้อมูลสภาพอากาศขณะนี้</p>
+        )}
 
         {loading ? (
-          <p className="text-center">กำลังโหลดข้อมูลพยากรณ์อากาศ...</p>
+          <p className="text-center text-lg md:text-xl">กำลังโหลดข้อมูลพยากรณ์อากาศ...</p>
         ) : Object.keys(forecast).length === 0 ? (
-          <p className="text-center">ไม่พบข้อมูลพยากรณ์อากาศ</p>
+          <p className="text-center text-lg md:text-xl">ไม่พบข้อมูลพยากรณ์อากาศ</p>
         ) : (
           <div>
             {Object.entries(forecast).map(([date, forecasts], index) => (
               <div key={index} className="mb-6">
-                <h2 className="text-lg font-bold mb-2">{formatDate(date)}</h2>
+                <h2 className="text-xl font-bold mb-2">{formatDate(date)}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {forecasts.map((item, idx) => (
-                    <div
-                      key={idx}
-                      className="border rounded-lg p-4 shadow-md text-black bg1"
-                    >
-                      <p>🕒 เวลา: {item.dt_txt.split(" ")[1]}</p>
-                      <p>🌡️ อุณหภูมิ: {item.main.temp} °C</p>
-                      <p>💧 ความชื้น: {item.main.humidity}%</p>
-                      <p>🌥️ สภาพอากาศ: {item.weather[0].description}</p>
+                    <div key={idx} className="border rounded-lg p-4 shadow-md text-black bg1">
+                      <p className="text-lg md:text-xl">⏰ เวลา: {item.dt_txt.split(" ")[1]}</p>
+                      <p className="text-lg md:text-xl">🌡️ อุณหภูมิ: {item.main.temp} °C</p>
+                      <p className="text-lg md:text-xl">💧 ความชื้น: {item.main.humidity}%</p>
+                      <p className="text-lg md:text-xl">🌥️ สภาพอากาศ: {item.weather[0].description}</p>
                       <div className="flex justify-center items-center">
                         <img
                           src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}
