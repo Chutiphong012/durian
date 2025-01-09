@@ -28,6 +28,13 @@ function Profile() {
     console.log(formData);
   };
 
+  // ฟังก์ชันจัดการออกจากระบบ
+  const handleLogout = () => {
+    // ทำการล้างข้อมูลที่เกี่ยวข้องกับการเข้าสู่ระบบ เช่น การลบ token หรือ session
+    // แล้วเปลี่ยนเส้นทางไปที่หน้า login
+    router.push('/login');
+  };
+
   useEffect(() => {
     // Google Map
     if (typeof window !== 'undefined' && window.google) {
@@ -191,20 +198,19 @@ function Profile() {
           </div>
 
           {/* ปุ่มบันทึกการแก้ไข */}
-          <div className="flex justify-center space-y-2">
+          <div className="flex justify-center space-x-4">
             <button
               type="submit"
-              className=" py-2 px-4 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="py-2 px-4 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               บันทึกการแก้ไข
             </button>
-          </div>
 
-          {/* ปุ่มบันทึกการแก้ไข */}
-          <div className="flex justify-center space-y-2">
+            {/* ปุ่มออกจากระบบ */}
             <button
-              type="submit"
-              className=" py-2 px-4 bg-red-500 text-white font-semibold rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              type="button"
+              onClick={handleLogout}
+              className="py-2 px-4 bg-red-500 text-white font-semibold rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               ออกจากระบบ
             </button>
