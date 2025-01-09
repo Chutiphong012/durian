@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -14,6 +14,7 @@ function Profile() {
   });
   const searchBoxRef = useRef(null);
   const mapRef = useRef(null);
+  const markerRef = useRef(null);
 
   // ฟังก์ชันจัดการการเปลี่ยนแปลงข้อมูลในฟอร์ม
   const handleChange = (e) => {
@@ -27,10 +28,83 @@ function Profile() {
     console.log(formData);
   };
 
+  useEffect(() => {
+    // Google Map
+    if (typeof window !== 'undefined' && window.google) {
+      const map = new window.google.maps.Map(mapRef.current, {
+        center: { lat: 13.736717, lng: 100.523186 }, // Default location (Bangkok)
+        zoom: 12,
+      });
+
+      // Search Box
+      const input = searchBoxRef.current;
+      const searchBox = new window.google.maps.places.SearchBox(input);
+
+      // Bias the SearchBox results towards current map bounds
+      map.addListener('bounds_changed', () => {
+        searchBox.setBounds(map.getBounds());
+      });
+
+      searchBox.addListener('places_changed', () => {
+        const places = searchBox.getPlaces();
+        if (places.length === 0) return;
+        const place = places[0];
+        const location = place.geometry.location;
+
+        // Update map center and add marker
+        map.setCenter(location);
+        map.setZoom(15);
+
+        addMarker(location.lat(), location.lng(), map);
+      });
+
+      // Click to add marker
+      map.addListener('click', (event) => {
+        const lat = event.latLng.lat();
+        const lng = event.latLng.lng();
+        addMarker(lat, lng, map);
+      });
+
+      // Add marker
+      const addMarker = (lat, lng, map) => {
+        // Remove existing marker if any
+        if (markerRef.current) {
+          markerRef.current.setMap(null);
+        }
+
+        // Add a new marker
+        const marker = new window.google.maps.Marker({
+          position: { lat, lng },
+          map: map,
+          draggable: true,
+        });
+
+        markerRef.current = marker;
+
+        // Update formData with the marker's position
+        setFormData((prev) => ({
+          ...prev,
+          latitude: lat,
+          longitude: lng,
+        }));
+
+        // Update formData on marker drag
+        marker.addListener('dragend', () => {
+          const position = marker.getPosition();
+          setFormData((prev) => ({
+            ...prev,
+            latitude: position.lat(),
+            longitude: position.lng(),
+          }));
+        });
+      };
+    }
+  }, []);
+
   return (
     <>
       <Head>
-        <title>สมัครสมาชิก</title>
+        <title>แก้ไขข้อมูลสมาชิก</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
@@ -115,11 +189,7 @@ function Profile() {
               className="w-full px-4 py-2 border border-gray-300 rounded-md bg-gray-100"
             />
           </div>
-
-          
         </form>
-
-        
       </div>
     </>
   );
