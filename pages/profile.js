@@ -189,6 +189,16 @@ function Profile() {
               className="w-full px-4 py-2 border border-gray-300 rounded-md bg-gray-100"
             />
           </div>
+
+          {/* ปุ่มบันทึกการแก้ไข */}
+          <div className="space-y-2">
+            <button
+              type="submit"
+              className="w-full py-2 px-4 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              บันทึกการแก้ไข
+            </button>
+          </div>
         </form>
       </div>
     </>
