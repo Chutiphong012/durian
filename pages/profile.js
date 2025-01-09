@@ -110,7 +110,7 @@ function Profile() {
 
       <div className="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-lg">
         <h1 className="text-3xl font-semibold text-center text-gray-700 mb-6">
-          แก้ไขข้อมูลสมาชิก
+          แก้ไขข้อมูล
         </h1>
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* ฟอร์ม */}
@@ -191,12 +191,22 @@ function Profile() {
           </div>
 
           {/* ปุ่มบันทึกการแก้ไข */}
-          <div className="space-y-2">
+          <div className="flex justify-center space-y-2">
             <button
               type="submit"
-              className="w-full py-2 px-4 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className=" py-2 px-4 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               บันทึกการแก้ไข
+            </button>
+          </div>
+
+          {/* ปุ่มบันทึกการแก้ไข */}
+          <div className="flex justify-center space-y-2">
+            <button
+              type="submit"
+              className=" py-2 px-4 bg-red-500 text-white font-semibold rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              ออกจากระบบ
             </button>
           </div>
         </form>
