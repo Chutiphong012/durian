@@ -116,9 +116,12 @@ function Profile() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
+      <h1 className="text-center text-3xl md:text-5xl font-bold py-4 px-4 text-white">
+        Durian Epidemic Geospatial Report System
+      </h1>
       <div className="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-lg">
         <h1 className="text-3xl font-semibold text-center text-gray-700 mb-6">
-          แก้ไขข้อมูล
+          แก้ไขข้อมูลสมาชิก
         </h1>
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* ฟอร์ม */}

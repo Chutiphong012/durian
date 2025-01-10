@@ -29,8 +29,13 @@ export default function Navbar() {
           </Link>
         </div>
         {/* โปรไฟล์ */}
-        <div>
+
+        <div className="flex justify-center space-x-2">
+        <span className="text-black text-lg md:text-xl hover:text-red-500">
+            ข้อมูลสมาชิก
+          </span>
         <Link href="/profile">
+        
           <img
             src="/img/profile.png"
             alt="Profile"
@@ -39,6 +44,17 @@ export default function Navbar() {
             className="h-8 w-8 text-gray-800 hover:opacity-80"
           />
         </Link>
+        </div>
+        <div>
+          
+            <button
+              type="button"
+              
+              className="py-2 px-4 bg-red-500 text-white font-semibold rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              ออกจากระบบ
+            </button>
+          
         </div>
       </div>
     </nav>

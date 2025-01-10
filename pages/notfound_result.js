@@ -114,27 +114,8 @@ const handleChange = (value) =>{
             
           </div>
           {/* ปุ่มเลือกผลการวิเคราะห์ */}
-          <div className="flex justify-center space-x-4 mb-6">
-            <a href="/notfound_result">
-            <button
-             type="button"
-              onClick={() => handleAnalyze("healthy")}
-              className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg"
-            >
-              ไม่เป็นโรครากเน่า
-            </button>
-            </a>
-            
-            <a href="/found_result">
-            <button
-            type="button"
-              onClick={() => handleAnalyze("disease")}
-              className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg"
-            >
-              เป็นโรครากเน่า
-            </button>
-            </a>
-            
+          <div className="bg-green-200 text-xl p-5 text-center">
+            <h1>ผลการวิเคราะห์ไม่พบโรครากเน่า</h1>
           </div>
 
           {/* แสดงผลการวิเคราะห์ */}
@@ -177,9 +158,7 @@ const handleChange = (value) =>{
               </RadioGroup>
             </div>
           )}
-          <div className="flex flex-col justify-center items-center">
-          <Button type="submit" className="">Submit</Button>
-          </div>
+          
           
         </div>
         
