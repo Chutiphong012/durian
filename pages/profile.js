@@ -3,9 +3,12 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Link from 'next/link';
 import authurize from '@/lib/auth';
+import { Toaster } from '@/components/ui/toaster';
+import { useToast } from '@/hooks/use-toast';
 
 function Profile() {
   const router = useRouter();
+  const {toast} = useToast();
   const [formData, setFormData] = useState({
     username: '',
     email: '',
@@ -13,20 +16,80 @@ function Profile() {
     latitude: '',
     longitude: '',
   });
+  const [formPassword,setFormPassword] = useState({
+    oldPassword:'',
+    newPassword:'',
+    confirmPassword:''
+  })
+
   const searchBoxRef = useRef(null);
   const mapRef = useRef(null);
   const markerRef = useRef(null);
-
+ 
   // ฟังก์ชันจัดการการเปลี่ยนแปลงข้อมูลในฟอร์ม
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+const handlePasswordChange = (e) =>{
+  const {id,value} = e.target;
 
+  setFormPassword((prevData)=>{
+    return {
+      ...prevData,
+      [id]: value
+    };
+  })
+
+  console.log(formPassword);
+}
   // ฟังก์ชันจัดการการส่งฟอร์ม
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     // ดำเนินการสมัครสมาชิกที่นี่
-    console.log(formData);
+   if(formPassword.newPassword !== formPassword.confirmPassword){
+    toast({
+      title:"Password Error",
+      description:"รหัสผ่านไม่ตรงกัน"
+    });
+    return;
+   }
+
+    const res = await fetch("http://localhost/durian/database/update_user.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        uid: localStorage.getItem("userId"),
+        username: formData.username,
+        email: formData.email,
+        password: formData.password,
+        latitude: formData.latitude,
+        longitude: formData.longitude,
+        oldPassword:formPassword.oldPassword,
+        newPassword:formPassword.newPassword
+      }),
+    });
+   
+    if(res.ok){
+      const data = await res.json();
+      console.log(data)
+      toast({
+        title:"Successful",
+        description:"เปลี่ยนข้อมูลผู้ใช้สำเร็จ"
+      });
+    }else if(res.status == 403){
+      toast({
+        title:"Password Error",
+        description:"รหัสผ่านไม่ตรงกับรหัสผ่านเก่า"
+      });
+    }else{
+      const data = await res.json();
+      console.log(data)
+      toast({
+        title:"Error",
+        description:"เปลี่ยนข้อมูลผู้ใช้ไม่สำเร็จ"
+      });
+    }
+
   };
 
   // ฟังก์ชันจัดการออกจากระบบ
@@ -36,14 +99,51 @@ function Profile() {
     router.push('/login');
   };
 
+  const getUserdata = async() =>{
+   
+    const res = await fetch("http://localhost/durian/database/userdata.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        uid: localStorage.getItem("userId"),
+        
+      }),
+    })
+    const data = await res.json();
+
+    if(res.ok){
+
+      console.log(data);
+      setFormData(data.data)
+     
+    }else{
+      console.log("error")
+      
+    }
+  }
+  useEffect(()=>{
+      getUserdata();
+  },[])
+
   useEffect(() => {
+    if(formData.latitude && formData.longitude){
     // Google Map
     if (typeof window !== 'undefined' && window.google) {
+      const location = {
+        lat: parseFloat(formData.latitude),  // Ensure latitude is a number
+        lng: parseFloat(formData.longitude)  // Ensure longitude is a number
+      };
+      console.log(formData.latitude ,formData.longitude)
       const map = new window.google.maps.Map(mapRef.current, {
         center: { lat: 13.736717, lng: 100.523186 }, // Default location (Bangkok)
         zoom: 12,
       });
 
+      new window.google.maps.Marker({
+        position: location,
+        map: map,
+        title: "ตำแหน่งตัวอย่าง",
+      });
       // Search Box
       const input = searchBoxRef.current;
       const searchBox = new window.google.maps.places.SearchBox(input);
@@ -107,7 +207,8 @@ function Profile() {
         });
       };
     }
-  }, []);
+  }
+  }, [formData]);
 
   return (
     <>
@@ -150,12 +251,37 @@ function Profile() {
           </div>
 
           <div className="space-y-2">
-            <label className="block text-lg font-medium text-gray-600">รหัสผ่าน</label>
+            <label className="block text-lg font-medium text-gray-600">รหัสผ่านเก่า</label>
             <input
-              type="password"
+              type="text"
               name="password"
-              value={formData.password}
-              onChange={handleChange}
+              value={formPassword.oldPassword}
+            id='oldPassword'
+              onChange={handlePasswordChange}
+              required
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div className="space-y-2">
+            <label className="block text-lg font-medium text-gray-600">รหัสผ่านใหม่</label>
+            <input
+              type="text"
+              name="password"
+              value={formPassword.newPassword}
+            id='newPassword'
+              onChange={handlePasswordChange}
+              required
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div className="space-y-2">
+            <label className="block text-lg font-medium text-gray-600">ยืนยันรหัสผ่าน</label>
+            <input
+              type="text"
+              name="password"
+              value={formPassword.confirmPassword}
+            id='confirmPassword'
+              onChange={handlePasswordChange}
               required
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
@@ -205,22 +331,17 @@ function Profile() {
           <div className="flex justify-center space-x-4">
             <button
               type="submit"
-              className="py-2 px-4 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="py-2 px-4 bg-green-500 text-white font-semibold rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
             >
               บันทึกการแก้ไข
             </button>
 
             {/* ปุ่มออกจากระบบ */}
-            <button
-              type="button"
-              onClick={handleLogout}
-              className="py-2 px-4 bg-red-500 text-white font-semibold rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              ออกจากระบบ
-            </button>
+           
           </div>
         </form>
       </div>
+      <Toaster/>
     </>
   );
 }

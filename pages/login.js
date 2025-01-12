@@ -1,46 +1,43 @@
 import { useState } from "react";
 import Head from "next/head";
-import Link from "next/link"; // import Link from Next.js
+import Link from "next/link"; 
 import redirect_login from "@/lib/redirect_login";
 import { useRouter } from "next/router";
-
-
 
 const Login = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+  const [showPassword, setShowPassword] = useState(false);  // สถานะการแสดงรหัสผ่าน
   const router = useRouter();
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Logic for backend interaction will be implemented later
-    // console.log("Form submitted", formData);
-    const res = await fetch('http://localhost/durian/database/login.php',{
-      method:"POST",
-      headers:{"Content-Type" : "application/json" },
+    const res = await fetch('http://localhost/durian/database/login.php', {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        email:formData.email,
-        password:formData.password 
+        email: formData.email,
+        password: formData.password,
       })
     });
 
-    if(res.ok){
+    if (res.ok) {
       const data = await res.json();
       console.log(data);
       localStorage.setItem("userId", data.userId);
       alert("ล็อกอินสำเร็จ");
       router.push('/');
-    }else{
+    } else {
       const data = await res.json();
       console.log(data);
       alert("อีเมลหรือรหัสผ่านไม่ถูกต้อง");
     }
-
   };
 
   return (
@@ -49,12 +46,12 @@ const Login = () => {
         <title>เข้าสู่ระบบ</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      
+
       <h1 className="text-center text-2xl md:text-4xl font-bold py-14 px-4 text-white mt-8">
         Durian Epidemic Geospatial Report System
       </h1>
 
-      <div className=" flex  justify-center">
+      <div className="flex justify-center">
         <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
           <h1 className="text-2xl font-bold text-center mb-4">เข้าสู่ระบบ</h1>
           <form onSubmit={handleSubmit}>
@@ -72,21 +69,32 @@ const Login = () => {
             
             <div className="mb-4">
               <label className="block text-gray-700 mb-2">รหัสผ่าน</label>
-              <input
-                type="password"
-                name="password"
-                value={formData.password}
-                onChange={handleChange}
-                required
-                className="w-full border border-gray-300 p-2 rounded-lg"
-              />
+              <div className="relative">
+                <input
+                  type={showPassword ? "text" : "password"}  // เปลี่ยนประเภทของ input เมื่อคลิก
+                  name="password"
+                  value={formData.password}
+                  onChange={handleChange}
+                  required
+                  className="w-full border border-gray-300 p-2 rounded-lg"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}  // เปลี่ยนสถานะการแสดงรหัสผ่าน
+                  className="absolute top-2 right-2 text-gray-500"
+                >
+                  {showPassword ? "🔓" : "🔒"} {/* สลับไอคอน */}
+                </button>
+              </div>
             </div>
-            <button
-              type="submit"
-              className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
-            >
-              เข้าสู่ระบบ
-            </button>
+            <div className="flex justify-center items-center">
+              <button
+                type="submit"
+                className="bg-green-500 text-white font-semibold rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 py-2 px-10"
+              >
+                เข้าสู่ระบบ
+              </button>
+            </div>
           </form>
 
           <div className="mt-4 text-center">

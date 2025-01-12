@@ -1,6 +1,14 @@
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function Navbar() {
+  const router = useRouter();
+  const handleLogout = () => {
+    // ทำการล้างข้อมูลที่เกี่ยวข้องกับการเข้าสู่ระบบ เช่น การลบ token หรือ session
+    // แล้วเปลี่ยนเส้นทางไปที่หน้า login
+    localStorage.clear();
+    router.push('/login');
+  };
   return (
     <nav className="p-3 cd mx-4 my-2 rounded-2xl shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
@@ -30,12 +38,11 @@ export default function Navbar() {
         </div>
         {/* โปรไฟล์ */}
 
+       
+        <div className=' flex gap-4 justify-center items-center'>
         <div className="flex justify-center space-x-2">
-        <span className="text-black text-lg md:text-xl hover:text-red-500">
-            ข้อมูลสมาชิก
-          </span>
-        <Link href="/profile">
-        
+        <Link className='flex justify-center text-lg items-center gap-2 hover:text-red-500 ' href="/profile">
+        ข้อมูลสมาชิก
           <img
             src="/img/profile.png"
             alt="Profile"
@@ -45,11 +52,9 @@ export default function Navbar() {
           />
         </Link>
         </div>
-        <div>
-          
             <button
               type="button"
-              
+              onClick={handleLogout}
               className="py-2 px-4 bg-red-500 text-white font-semibold rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               ออกจากระบบ

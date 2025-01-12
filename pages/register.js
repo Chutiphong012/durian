@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Head from "next/head";
-import Link from "next/link"; // import Link from Next.js
+import Link from "next/link"; 
 import { useRouter } from "next/router";
 import redirect_login from "@/lib/redirect_login";
 import { useToast } from "@/hooks/use-toast";
@@ -16,11 +16,13 @@ function Register() {
     longitude: "",
   });
 
+  const [showPassword, setShowPassword] = useState(false);  // สถานะการแสดงรหัสผ่าน
   const mapRef = useRef(null);
   const markerRef = useRef(null);
   const searchBoxRef = useRef(null);
   const router = useRouter();
   const { toast } = useToast();
+  
   useEffect(() => {
     // Google Map
     if (typeof window !== "undefined" && window.google) {
@@ -33,7 +35,6 @@ function Register() {
       const input = searchBoxRef.current;
       const searchBox = new window.google.maps.places.SearchBox(input);
 
-      // Bias the SearchBox results towards current map bounds
       map.addListener("bounds_changed", () => {
         searchBox.setBounds(map.getBounds());
       });
@@ -60,12 +61,10 @@ function Register() {
 
       // Add marker
       const addMarker = (lat, lng, map) => {
-        // Remove existing marker if any
         if (markerRef.current) {
           markerRef.current.setMap(null);
         }
 
-        // Add a new marker
         const marker = new window.google.maps.Marker({
           position: { lat, lng },
           map: map,
@@ -81,7 +80,6 @@ function Register() {
           longitude: lng,
         }));
 
-        // Update formData on marker drag
         marker.addListener("dragend", () => {
           const position = marker.getPosition();
           setFormData((prev) => ({
@@ -94,16 +92,14 @@ function Register() {
     }
   }, []);
 
-  // Handle input change
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Placeholder function for form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
- 
+
     const res = await fetch("http://localhost/durian/database/register.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -111,7 +107,7 @@ function Register() {
         username: formData.username,
         email: formData.email,
         password: formData.password,
-        latitude: formData.longitude,
+        latitude: formData.latitude,
         longitude: formData.longitude,
       }),
     });
@@ -124,25 +120,30 @@ function Register() {
       toast({
         title: "แจ้งเตือน",
         description: "ชื่อผู้ใช้ซ้ำ",
-      })
+      });
       console.log(data);
     } else {
       toast({
         title: "แจ้งเตือน",
         description: "ไม่สามารถสมัครสมาชิกได้",
-      })
+      });
     }
   };
 
-
-
-  
   return (
     <>
       <Head>
         <title>สมัครสมาชิก</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
+
+      <button
+        type="button"
+        onClick={() => router.push("/login")}
+        className="absolute top-4 left-4 py-2 px-6 bg-green-500 text-white font-semibold rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-gray-500"
+      >
+        เข้าสู่ระบบ
+      </button>
 
       <h1 className="text-center text-2xl md:text-4xl font-bold py-14 px-4 text-white mt-8">
         Durian Epidemic Geospatial Report System
@@ -185,14 +186,23 @@ function Register() {
             <label className="block text-lg font-medium text-gray-600">
               รหัสผ่าน
             </label>
-            <input
-              type="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute top-2 right-2 text-gray-500"
+              >
+                {showPassword ? "🔓" : "🔒"} 
+              </button>
+            </div>
           </div>
 
           <div className="space-y-2">
@@ -246,11 +256,10 @@ function Register() {
           <div className="text-center">
             <button
               type="submit"
-              className="w-full py-3 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="py-2 px-10 bg-green-500 text-white font-semibold rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
             >
               สมัครสมาชิก
             </button>
-           
           </div>
         </form>
 
@@ -260,7 +269,7 @@ function Register() {
           </Link>
         </div>
       </div>
-      <Toaster/>
+      <Toaster />
     </>
   );
 }

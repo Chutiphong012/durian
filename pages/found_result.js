@@ -1,4 +1,5 @@
-import { useState } from "react";
+"use client";
+import { useState,useEffect } from "react";
 import Head from "next/head";
 import authurize from "@/lib/auth";
 import { useToast } from "@/hooks/use-toast";
@@ -6,6 +7,13 @@ import { Toaster } from "@/components/ui/toaster";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardTitle,
+} from "@/components/ui/card";
+import { UploadButton } from "@/components/ui/uploadButton";
 
 const treatmentMethods = {
   ระยะเริ่มต้น:
@@ -35,50 +43,58 @@ const symtomMap = [
 function Analyze() {
   const [result, setResult] = useState("");
   const [status, setStatus] = useState("");
+  const [isSubmit, setIsSubmit] = useState(false);
+  const [treatment, setTreatment] = useState("");
   const [selectedStage, setSelectedStage] = useState("");
   const { toast } = useToast();
-  const image = "asd";
+  const [imagePreview, setImage] = useState();
 
-  const handleAnalyze = (status) => {
-    setStatus(status);
-    if (status === "healthy") {
-      setResult("ผลการวิเคราะห์: ไม่พบโรค");
-    } else if (status === "disease") {
-      setResult("ผลการวิเคราะห์: พบโรค");
+  useEffect(() => {
+    const savedImage = localStorage.getItem("image");
+    if (savedImage) {
+      setImage(savedImage);
     }
-  };
+  }, []);
 
   const disease_record = async (e) => {
     e.preventDefault();
-    const treatment = treatmentMethods[selectedStage];
-    const res = await fetch("http://localhost/durian/database/detect.php", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        uid: localStorage.getItem("userId"),
-        severity_lvl: selectedStage,
-        treatment: treatment,
-      }),
-    });
+    const treatmentText = treatmentMethods[selectedStage];
+    try {
+      const res = await fetch("http://localhost/durian/database/detect.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          uid: localStorage.getItem("userId"),
+          severity_lvl: selectedStage,
+          treatment: treatmentText,
+        }),
+      });
 
-    if (res.ok) {
-      toast({
-        title: "แจ้งเตือน",
-        description: "เพิ่มสำเร็จ",
-      });
-    } else {
-      toast({
-        title: "แจ้งเตือน",
-        description: "เพิ่มไม่สำเร็จ",
-      });
-      const data = await res.json();
-      console.log(data.message);
+      if (res.ok) {
+        toast({
+          title: "แจ้งเตือน",
+          description: "เพิ่มสำเร็จ",
+        });
+      } else {
+        toast({
+          title: "แจ้งเตือน",
+          description: "เพิ่มไม่สำเร็จ",
+        });
+        const data = await res.json();
+        console.log(data.message);
+      }
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setIsSubmit(true);
     }
   };
 
   const handleChange = (value) => {
     setSelectedStage(value);
     console.log(value);
+    const treatmentText = treatmentMethods[value];
+    setTreatment(treatmentText);
   };
 
   return (
@@ -87,58 +103,38 @@ function Analyze() {
         <title>วิเคราะห์โรค</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <form onSubmit={disease_record}>
-        <div className="min-h-screen">
-        <h1 className="text-center text-3xl md:text-5xl font-bold py-4 px-4 text-white">
-        Durian Epidemic Geospatial Report System
-      </h1>
-          <h1 className="text-center text-2xl md:text-4xl font-bold py-4 px-4 text-white">
-            วิเคราะห์โรค
-          </h1>
+      <div className="min-h-screen">
+        <form onSubmit={disease_record}>
+          <div className="mb-10">
+            <h1 className="text-center text-3xl md:text-5xl font-bold py-4 px-4 text-white">
+              Durian Epidemic Geospatial Report System
+            </h1>
+            <h1 className="text-center text-2xl md:text-4xl font-bold py-4 px-4 text-white">
+              วิเคราะห์โรค
+            </h1>
 
-          <div className="max-w-xl mx-auto bg-white p-6 rounded-2xl shadow-lg">
-            <div className="mb-6">
-              {image && (
-                <div className="mt-4 text-center">
-                  <h3>ตัวอย่างรูปภาพ:</h3>
-                  <img src={image} alt="Uploaded" className="w-full h-auto" />
-                </div>
-              )}
-              <input
-                type="file"
-                accept="image/*"
-                // onChange={handleImageUpload}
-                className="mb-4 w-full py-2 px-4 border rounded-lg"
-              />
-              <div className="flex flex-col justify-center items-center">
-                <Button>วิเคราะห์โรค</Button>
-              </div>
-            </div>
-
-
-        {/* ////////////////////////////////////////////////////////////////// */}
-            {/* ปุ่มเลือกผลการวิเคราะห์ */}
-            <div className="bg-red-200 text-xl p-5 text-center">
-              <h1>ผลการวิเคราะห์ไม่พบโรครากเน่า</h1>
-            </div>
-        {/* ////////////////////////////////////////////////////////////////// */}
-            {/* แสดงผลการวิเคราะห์ */}
-              <div>
-                <h1>กรุณาระบุอาการ</h1>
+            <div className="max-w-xl mx-auto bg-white p-6 rounded-2xl shadow-lg">
+              <div className="mb-6">
+                
+                  <div className="mt-4 text-center">
+                    {/* <h3>ตัวอย่างรูปภาพ:</h3> */}
+                    <img src={imagePreview} alt="Uploaded" className="w-full h-auto" />
+                  </div>
+                
+              
               </div>
 
-            {result && (
-              <div
-                className={`mt-6 p-4 rounded-lg ${
-                  result.includes("ไม่พบ")
-                    ? "bg-green-100 text-green-700"
-                    : "bg-red-100 text-red-700"
-                }`}
-              >
-                {result}
+              {/* ////////////////////////////////////////////////////////////////// */}
+              {/* ปุ่มเลือกผลการวิเคราะห์ */}
+              <div className="bg-red-200 text-xl p-5 text-center">
+                <h1>ผลการวิเคราะห์พบโรครากเน่า</h1>
               </div>
-            )}
-            {status == "disease" && (
+              {/* ////////////////////////////////////////////////////////////////// */}
+              {/* แสดงผลการวิเคราะห์ */}
+              <div className="mt-4 mb-2">
+                <h1 className="text-lg">กรุณาระบุอาการ</h1>
+              </div>
+
               <div>
                 <RadioGroup
                   className="flex flex-col gap-4 mt-4"
@@ -154,7 +150,10 @@ function Analyze() {
                           name="severity"
                           id={`option-${index}`}
                         />
-                        <Label htmlFor={`option-${index}`} style={{ fontSize: "17px" }}>
+                        <Label
+                          htmlFor={`option-${index}`}
+                          style={{ fontSize: "17px" }}
+                        >
                           {items.symtom}
                         </Label>
                       </div>
@@ -162,54 +161,35 @@ function Analyze() {
                   })}
                 </RadioGroup>
               </div>
-            )}
 
-            {/* เพิ่ม Radio Button ในส่วนนี้ */}
-            <div className="mt-6">
-              <RadioGroup
-                className="flex flex-col gap-4"
-                value={selectedStage}
-                name="severity"
-                onValueChange={handleChange}
-              >
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem
-                    value="ระยะเริ่มต้น"
-                    name="severity"
-                    id="option-0"
-                  />
-                  <Label htmlFor="option-0">ใบเปลี่ยนเป็นสีเหลืองซีด ลำต้น กิ่ง รากมีสีของเปลือกที่เข้มเป็นจุดฉ่ำน้ำ</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem
-                    value="ระยะกลาง"
-                    name="severity"
-                    id="option-1"
-                  />
-                  <Label htmlFor="option-1">ใบของจะเริ่มร่วงแผลบริเวณราก ลำต้นและกิ่งมีขนาดใหญ่</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem
-                    value="ระยะรุนแรง"
-                    name="severity"
-                    id="option-2"
-                  />
-                  <Label htmlFor="option-2">ใบร่วงเยอะหรือร่วงจนหมดต้น รากเสียหายอย่างหนัก ลำต้นเน่ายืนต้นตาย</Label>
-                </div>
-              </RadioGroup>
+              <div className="flex flex-col justify-center items-center mt-4 ">
+                <Button
+                  type="submit"
+                  className="bg-green-500 text-white p-2 rounded-lg hover:bg-green-700"
+                >
+                  submit
+                </Button>
+              </div>
+
+              {/* เพิ่ม Radio Button ในส่วนนี้ */}
             </div>
-
-            <div  className="flex flex-col justify-center items-center ">
-            <Button className = "bg-green-500 text-white p-2 rounded-lg hover:bg-green-700">
-                submit
-            </Button>
-            </div>
-            
-            {/* เพิ่ม Radio Button ในส่วนนี้ */}
-
           </div>
-        </div>
-      </form>
+        </form>
+        {isSubmit && (
+          <Card className="max-w-xl mx-auto text-lg">
+            <div className="mt-5 ml-4">
+              <CardTitle className="">คำแนะนำวิธีการรักษา</CardTitle>
+              <CardDescription className="flex">
+                เป็นโรครากเน่าในระดับ :{" "}
+                <p className="text-red-500">{selectedStage}</p>
+              </CardDescription>
+            </div>
+            <CardContent className="mt-4">
+              <div className=" bg-gray-100 rounded-md">{treatment}</div>
+            </CardContent>
+          </Card>
+        )}
+      </div>
       <Toaster />
     </>
   );

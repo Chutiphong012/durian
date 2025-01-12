@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Head from "next/head";
 import authurize from "@/lib/auth";
 import { useToast } from "@/hooks/use-toast";
@@ -35,16 +35,14 @@ function Analyze() {
   const [status, setStatus] = useState("");
   const [selectedStage, setSelectedStage] = useState("");
   const { toast } = useToast();
-  const image = "asd";
+  const [image,setImage] = useState();
   // ฟังก์ชันจัดการเมื่อกดปุ่ม
-  const handleAnalyze = (status) => {
-    setStatus(status);
-    if (status === "healthy") {
-      setResult("ผลการวิเคราะห์: ไม่พบโรค");
-    } else if (status === "disease") {
-      setResult("ผลการวิเคราะห์: พบโรค");
-    }
-  };
+   useEffect(()=>{
+     const savedImage = localStorage.getItem("image");
+     if(savedImage){
+       setImage(savedImage);
+     }
+   },[])
  
   const disease_record = async (e) => {
     e.preventDefault();
@@ -97,20 +95,13 @@ const handleChange = (value) =>{
 
         <div className="max-w-xl mx-auto bg-white p-6 rounded-2xl shadow-lg">
           <div className="mb-6">
-            {image && (
+             
               <div className="mt-4 text-center">
-                <h3>ตัวอย่างรูปภาพ:</h3>
+                {/* <h3>ตัวอย่างรูปภาพ:</h3> */}
                 <img src={image} alt="Uploaded" className="w-full h-auto" />
               </div>
-            )}
-            <input
-              type="file"
-              accept="image/*"
-              // onChange={handleImageUpload}
-              className="mb-4 w-full py-2 px-4 border rounded-lg"
-            />
-            <div className="flex flex-col justify-center items-center"><Button >วิเคราะห์โรค</Button>
-            </div>
+            
+            
             
           </div>
           {/* ปุ่มเลือกผลการวิเคราะห์ */}
