@@ -33,7 +33,7 @@ export default function Navbar() {
             วิเคราะห์โรค
           </Link>
           <Link href="/map" className="text-black hover:text-red-500 text-lg md:text-xl">
-            แสดงตำแหน่งโรค
+            รายงานการพบโรค
           </Link>
         </div>
         {/* โปรไฟล์ */}
