@@ -93,11 +93,11 @@ const handlePasswordChange = (e) =>{
   
 
   // ฟังก์ชันจัดการออกจากระบบ
-  const handleLogout = () => {
-    // ทำการล้างข้อมูลที่เกี่ยวข้องกับการเข้าสู่ระบบ เช่น การลบ token หรือ session
-    // แล้วเปลี่ยนเส้นทางไปที่หน้า login
-    router.push('/login');
-  };
+  // const handleLogout = () => {
+  //   // ทำการล้างข้อมูลที่เกี่ยวข้องกับการเข้าสู่ระบบ เช่น การลบ token หรือ session
+  //   // แล้วเปลี่ยนเส้นทางไปที่หน้า login
+  //   router.push('/login');
+  // };
 
   const getUserdata = async() =>{
    
@@ -126,89 +126,92 @@ const handlePasswordChange = (e) =>{
   },[])
 
   useEffect(() => {
-    if(formData.latitude && formData.longitude){
-    // Google Map
-    if (typeof window !== 'undefined' && window.google) {
-      const location = {
-        lat: parseFloat(formData.latitude),  // Ensure latitude is a number
-        lng: parseFloat(formData.longitude)  // Ensure longitude is a number
-      };
-      console.log(formData.latitude ,formData.longitude)
-      const map = new window.google.maps.Map(mapRef.current, {
-        center: { lat: 13.736717, lng: 100.523186 }, // Default location (Bangkok)
-        zoom: 12,
-      });
-
-      new window.google.maps.Marker({
-        position: location,
-        map: map,
-        title: "ตำแหน่งตัวอย่าง",
-      });
-      // Search Box
-      const input = searchBoxRef.current;
-      const searchBox = new window.google.maps.places.SearchBox(input);
-
-      // Bias the SearchBox results towards current map bounds
-      map.addListener('bounds_changed', () => {
-        searchBox.setBounds(map.getBounds());
-      });
-
-      searchBox.addListener('places_changed', () => {
-        const places = searchBox.getPlaces();
-        if (places.length === 0) return;
-        const place = places[0];
-        const location = place.geometry.location;
-
-        // Update map center and add marker
-        map.setCenter(location);
-        map.setZoom(15);
-
-        addMarker(location.lat(), location.lng(), map);
-      });
-
-      // Click to add marker
-      map.addListener('click', (event) => {
-        const lat = event.latLng.lat();
-        const lng = event.latLng.lng();
-        addMarker(lat, lng, map);
-      });
-
-      // Add marker
-      const addMarker = (lat, lng, map) => {
-        // Remove existing marker if any
-        if (markerRef.current) {
-          markerRef.current.setMap(null);
-        }
-
-        // Add a new marker
-        const marker = new window.google.maps.Marker({
-          position: { lat, lng },
-          map: map,
-          draggable: true,
+    if (formData.latitude && formData.longitude) {
+      // Google Map
+      if (typeof window !== 'undefined' && window.google) {
+        const location = {
+          lat: parseFloat(formData.latitude),  // Ensure latitude is a number
+          lng: parseFloat(formData.longitude)  // Ensure longitude is a number
+        };
+  
+        const map = new window.google.maps.Map(mapRef.current, {
+          center: location, // Set center to the updated location
+          zoom: 17,
         });
-
-        markerRef.current = marker;
-
-        // Update formData with the marker's position
-        setFormData((prev) => ({
-          ...prev,
-          latitude: lat,
-          longitude: lng,
-        }));
-
-        // Update formData on marker drag
-        marker.addListener('dragend', () => {
-          const position = marker.getPosition();
+  
+        // Create a new marker at the updated location
+        new window.google.maps.Marker({
+          position: location,
+          map: map,
+          title: "ตำแหน่งตัวอย่าง",
+        });
+  
+        // Search Box
+        const input = searchBoxRef.current;
+        const searchBox = new window.google.maps.places.SearchBox(input);
+  
+        // Bias the SearchBox results towards current map bounds
+        map.addListener('bounds_changed', () => {
+          searchBox.setBounds(map.getBounds());
+        });
+  
+        searchBox.addListener('places_changed', () => {
+          const places = searchBox.getPlaces();
+          if (places.length === 0) return;
+          const place = places[0];
+          const location = place.geometry.location;
+  
+          // Update map center and add marker
+          map.setCenter(location);
+          map.setZoom(15);
+  
+          addMarker(location.lat(), location.lng(), map);
+        });
+  
+        // Click to add marker
+        map.addListener('click', (event) => {
+          const lat = event.latLng.lat();
+          const lng = event.latLng.lng();
+          addMarker(lat, lng, map);
+        });
+  
+        // Add marker function
+        const addMarker = (lat, lng, map) => {
+          // Remove existing marker if any
+          if (markerRef.current) {
+            markerRef.current.setMap(null);
+          }
+  
+          // Add a new marker
+          const marker = new window.google.maps.Marker({
+            position: { lat, lng },
+            map: map,
+            draggable: true,
+          });
+  
+          markerRef.current = marker;
+  
+          // Update formData with the marker's position
           setFormData((prev) => ({
             ...prev,
-            latitude: position.lat(),
-            longitude: position.lng(),
+            latitude: lat,
+            longitude: lng,
           }));
-        });
-      };
+  
+          // Update formData on marker drag
+          marker.addListener('dragend', () => {
+            const position = marker.getPosition();
+            setFormData((prev) => ({
+              ...prev,
+              latitude: position.lat(),
+              longitude: position.lng(),
+            }));
+          });
+        };
+      }
     }
-  }
-  }, [formData]);
+  }, [formData]);  // Effect will run whenever formData changes
+  
 
   return (
     <>
