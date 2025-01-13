@@ -162,12 +162,12 @@ function Analyze() {
                 </RadioGroup>
               </div>
 
-              <div className="flex flex-col justify-center items-center mt-4 ">
+              <div className="flex flex-col justify-center items-center mt-4">
                 <Button
                   type="submit"
-                  className="bg-green-500 text-white p-2 rounded-lg hover:bg-green-700"
+                  className="bg-green-500 text-white p-2 rounded-lg hover:bg-green-700 px-8"
                 >
-                  submit
+                  บันทึก
                 </Button>
               </div>
 
