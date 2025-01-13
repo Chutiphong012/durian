@@ -43,54 +43,54 @@ const handlePasswordChange = (e) =>{
   console.log(formPassword);
 }
   // ฟังก์ชันจัดการการส่งฟอร์ม
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // ดำเนินการสมัครสมาชิกที่นี่
-   if(formPassword.newPassword !== formPassword.confirmPassword){
-    toast({
-      title:"Password Error",
-      description:"รหัสผ่านไม่ตรงกัน"
-    });
-    return;
-   }
-
+  
+    const updateData = {
+      uid: localStorage.getItem("userId"),
+      username: formData.username,
+      email: formData.email,
+      latitude: formData.latitude,
+      longitude: formData.longitude,
+    };
+  
+    if (formPassword.oldPassword && formPassword.newPassword) {
+      if (formPassword.newPassword !== formPassword.confirmPassword) {
+        toast({
+          title: "Password Error",
+          description: "รหัสผ่านไม่ตรงกัน",
+        });
+        return;
+      }
+      updateData.oldPassword = formPassword.oldPassword;
+      updateData.newPassword = formPassword.newPassword;
+    }
+  
     const res = await fetch("http://localhost/durian/database/update_user.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        uid: localStorage.getItem("userId"),
-        username: formData.username,
-        email: formData.email,
-        password: formData.password,
-        latitude: formData.latitude,
-        longitude: formData.longitude,
-        oldPassword:formPassword.oldPassword,
-        newPassword:formPassword.newPassword
-      }),
+      body: JSON.stringify(updateData),
     });
-   
-    if(res.ok){
-      const data = await res.json();
-      console.log(data)
+  
+    if (res.ok) {
       toast({
-        title:"Successful",
-        description:"เปลี่ยนข้อมูลผู้ใช้สำเร็จ"
+        title: "Successful",
+        description: "เปลี่ยนข้อมูลผู้ใช้สำเร็จ",
       });
-    }else if(res.status == 403){
+    } else if (res.status === 403) {
       toast({
-        title:"Password Error",
-        description:"รหัสผ่านไม่ตรงกับรหัสผ่านเก่า"
+        title: "Password Error",
+        description: "รหัสผ่านไม่ถูกต้อง",
       });
-    }else{
-      const data = await res.json();
-      console.log(data)
+    } else {
       toast({
-        title:"Error",
-        description:"เปลี่ยนข้อมูลผู้ใช้ไม่สำเร็จ"
+        title: "Error",
+        description: "ไม่สามารถเปลี่ยนข้อมูลผู้ใช้ได้",
       });
     }
-
   };
+  
+  
 
   // ฟังก์ชันจัดการออกจากระบบ
   const handleLogout = () => {
@@ -258,7 +258,7 @@ const handlePasswordChange = (e) =>{
               value={formPassword.oldPassword}
             id='oldPassword'
               onChange={handlePasswordChange}
-              required
+              
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
@@ -270,7 +270,7 @@ const handlePasswordChange = (e) =>{
               value={formPassword.newPassword}
             id='newPassword'
               onChange={handlePasswordChange}
-              required
+              
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
@@ -282,7 +282,7 @@ const handlePasswordChange = (e) =>{
               value={formPassword.confirmPassword}
             id='confirmPassword'
               onChange={handlePasswordChange}
-              required
+              
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>

@@ -26,62 +26,61 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $oldPassword = $data['oldPassword'] ?? null;
     $newpassword = $data['newPassword'] ?? null;
 
-    
-
     try {
         $sql = "SELECT * FROM user WHERE user_id = :user_id";
         $stmt = $conn->prepare($sql);
         $stmt->execute([':user_id' => $uid]);
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        $hash_password = password_hash($newpassword, PASSWORD_DEFAULT);
-
-        if (password_verify($oldPassword, $result['password'])) {
-            $sql = "UPDATE user SET username = :username, email = :email, password = :password, longitude = :longitude, latitude = :latitude WHERE user_id = :user_id";
-
-            $stmt = $conn->prepare($sql);
-            // Execute the statement with an array of values
-            $stmt->execute([
-                ':username' => $username,
-                ':email' => $email,
-                ':password' => $hash_password,
-                ':longitude' => $longitude,
-                ':latitude' => $latitude,
-                ':user_id' => $uid
-            ]);
-
-            // Check if rows were affected (update successful)
-            if ($stmt->rowCount() > 0) {
-                http_response_code(200);
-                echo json_encode([
-                    'message' => "Update successful"
-                ]);
-            } else {
-                http_response_code(400);
-                echo json_encode([
-                    'message' => "No changes made"
-                ]);
-            }
-        }else{
-            http_response_code(403);
-            echo json_encode([
-                'message' => "Password not match"
-            ]);
+        if (!$result) {
+            http_response_code(404);
+            echo json_encode(['message' => "User not found"]);
+            exit();
         }
-        
-        // Debugging: Output the result for testing
 
+        // Prepare parameters for update
+        $params = [
+            ':username' => $username,
+            ':email' => $email,
+            ':longitude' => $longitude,
+            ':latitude' => $latitude,
+            ':user_id' => $uid,
+        ];
 
+        // Update query without password
+        $sql = "UPDATE user SET username = :username, email = :email, longitude = :longitude, latitude = :latitude WHERE user_id = :user_id";
+
+        // If old password is provided, verify it
+        if (!empty($oldPassword)) {
+            if (password_verify($oldPassword, $result['password'])) {
+                // If new password is provided, include it in the update
+                if (!empty($newpassword)) {
+                    $sql = "UPDATE user SET username = :username, email = :email, password = :password, longitude = :longitude, latitude = :latitude WHERE user_id = :user_id";
+                    $params[':password'] = password_hash($newpassword, PASSWORD_DEFAULT);
+                }
+            } else {
+                http_response_code(403);
+                echo json_encode(['message' => "Password not match"]);
+                exit();
+            }
+        }
+
+        $stmt = $conn->prepare($sql);
+        $stmt->execute($params);
+
+        if ($stmt->rowCount() > 0) {
+            http_response_code(200);
+            echo json_encode(['message' => "Update successful"]);
+        } else {
+            http_response_code(400);
+            echo json_encode(['message' => "No changes made"]);
+        }
     } catch (PDOException $e) {
-        http_response_code(402);
+        http_response_code(500);
         echo json_encode([
-            'message' => "Error, " . $e->getMessage()
+            'message' => "Error: " . $e->getMessage()
         ]);
     }
-
 }
-
-
-
 
 ?>
