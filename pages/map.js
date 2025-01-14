@@ -127,31 +127,34 @@ useEffect(() => {
 
           // เพิ่ม event listener ให้มาร์คเกอร์ของผู้ใช้
           marker.addListener("click", () => {
-            const detection = detection_data?.find(
-              (det) => det.uid === user.user_id
-            );
+            const detections = detection_data?.filter((det) => det.uid === user.user_id) || []; // ดึงข้อมูลทั้งหมดที่เกี่ยวข้องกับ user_id
 
-            console.log(detection_data);
-            // Check if detection is defined before accessing svt_lvl
-            const lvl = detection ? severity_lvl[detection.svt_lvl] : "Unknown"; // Default value if detection is not found
+let detectionInfo = ""; // เก็บข้อมูลระดับความรุนแรงและวันที่ทั้งหมด
+if (detections.length > 0) {
+  detections.forEach((detection) => {
+    const lvl = severity_lvl[detection.svt_lvl] || "Unknown"; // ใช้ระดับความรุนแรงหรือ "Unknown" หากไม่มีข้อมูล
+    detectionInfo += `
+      <li>
+        <strong>ระดับ:</strong> ${lvl} 
+        <br>
+        <strong>วันที่:</strong> ${new Date(detection.date).toDateString()}
+      </li>
+    `;
+  });
+} else {
+  detectionInfo = "<li>ไม่พบข้อมูลการวิเคราะห์</li>"; // แสดงข้อความกรณีไม่มีข้อมูล
+}
 
-            console.log(detection, "and ", lvl);
+const userInfo = `
+  <div class="overflow-y-auto max-h-52 w-64">
+    <strong>ชื่อผู้ใช้:</strong> ${user.username} <br>
+    <ul>${detectionInfo}</ul> <!-- แสดงข้อมูลทั้งหมดในรูปแบบรายการ -->
+  </div>
+`;
 
-            const detectionInfo = `
-                <strong>ระดับ: ${lvl}</strong><br>
-                
-            `;
-            const userInfo = `
-                <div>
-                  <strong>ชื่อผู้ใช้:</strong> ${user.username} <br>
-                  ${detectionInfo}
-                  ${detection ? `<strong>วันที่:</strong> ${new Date(detection.date).toDateString()}` :''}
+infoWindow.current.setContent(userInfo); // ข้อความที่จะแสดงใน InfoWindow
+infoWindow.current.open(map, marker); // แสดง InfoWindow
 
-                </div>
-                  `;
-
-            infoWindow.current.setContent(userInfo); // ข้อความที่จะแสดงใน InfoWindow
-            infoWindow.current.open(map, marker); // แสดง InfoWindow
           });
         });
       }
@@ -188,7 +191,7 @@ useEffect(() => {
 
     {/* กล่องตัวอธิบาย */}
     <div className="space-y-4">
-      <ul className="space-y-2">
+      <ul className="space-y-2 text-white">
         <li>🟡ระยะเริ่มต้น</li>
         <li>🟠ระยะกลาง</li>
         <li>🔴ระยะรุนแรง</li>
