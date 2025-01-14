@@ -13,7 +13,7 @@ import {
   CardDescription,
   CardTitle,
 } from "@/components/ui/card";
-import { UploadButton } from "@/components/ui/uploadButton";
+// import { UploadButton } from "@/components/ui/uploadButton";
 
 const treatmentMethods = {
   ระยะเริ่มต้น:

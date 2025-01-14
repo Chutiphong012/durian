@@ -6,7 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { UploadButton } from "@/components/ui/uploadButton";
+// import { UploadButton } from "@/components/ui/uploadButton";
 
 
 function Analyze() {
