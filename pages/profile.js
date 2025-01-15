@@ -144,6 +144,7 @@ const handlePasswordChange = (e) =>{
           position: location,
           map: map,
           title: "ตำแหน่งตัวอย่าง",
+          icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
         });
   
         // Search Box

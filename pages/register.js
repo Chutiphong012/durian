@@ -69,6 +69,9 @@ function Register() {
           position: { lat, lng },
           map: map,
           draggable: true,
+          icon: {
+            url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png", // ใช้ URL ของ marker สีเขียว
+          },
         });
 
         markerRef.current = marker;

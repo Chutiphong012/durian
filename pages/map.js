@@ -100,63 +100,67 @@ useEffect(() => {
         infoWindow.current = new window.google.maps.InfoWindow(); // สร้าง InfoWindow
 
         // หมุดของผู้ใช้ที่ล็อกอิน
-        const currentUserMarker = new window.google.maps.Marker({
-          position: currentUserLocation,
-          map: map,
-          title: "Current User",
-        });
+const currentUserMarker = new window.google.maps.Marker({
+  position: currentUserLocation,
+  map: map,
+  title: "Current User",
+  icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png", // เปลี่ยนสีของ Marker หลักเป็นสีเขียว
+});
 
-        // เพิ่ม event listener ให้หมุดของผู้ใช้ที่ล็อกอิน
-        currentUserMarker.addListener("click", () => {
-          infoWindow.current.setContent("You are here!"); // ข้อความที่จะแสดงใน InfoWindow
-          infoWindow.current.open(map, currentUserMarker); // แสดง InfoWindow
-        });
+// เพิ่ม event listener ให้หมุดของผู้ใช้ที่ล็อกอิน
+currentUserMarker.addListener("click", () => {
+  infoWindow.current.setContent("You are here!"); // ข้อความที่จะแสดงใน InfoWindow
+  infoWindow.current.open(map, currentUserMarker); // แสดง InfoWindow
+});
+
 
         // เพิ่มมาร์คเกอร์ให้กับผู้ใช้ทุกคน
-        usersData.forEach((user) => {
-          const location = {
-            lat: parseFloat(user.latitude),
-            lng: parseFloat(user.longitude),
-          };
+        // เพิ่มมาร์คเกอร์ให้กับผู้ใช้ทุกคน
+usersData.forEach((user) => {
+  const location = {
+    lat: parseFloat(user.latitude),
+    lng: parseFloat(user.longitude),
+  };
 
-          const marker = new window.google.maps.Marker({
-            position: location,
-            map: map,
-            title: `User ID: ${user.user_id}`,
-          });
-
-          // เพิ่ม event listener ให้มาร์คเกอร์ของผู้ใช้
-          marker.addListener("click", () => {
-            const detections = detection_data?.filter((det) => det.uid === user.user_id) || []; // ดึงข้อมูลทั้งหมดที่เกี่ยวข้องกับ user_id
-
-let detectionInfo = ""; // เก็บข้อมูลระดับความรุนแรงและวันที่ทั้งหมด
-if (detections.length > 0) {
-  detections.forEach((detection) => {
-    const lvl = severity_lvl[detection.svt_lvl] || "Unknown"; // ใช้ระดับความรุนแรงหรือ "Unknown" หากไม่มีข้อมูล
-    detectionInfo += `
-      <li>
-        <strong>ระดับ:</strong> ${lvl} 
-        <br>
-        <strong>วันที่:</strong> ${new Date(detection.date).toDateString()}
-      </li>
-    `;
+  const marker = new window.google.maps.Marker({
+    position: location,
+    map: map,
+    title: `User ID: ${user.user_id}`,
+    icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png", // เปลี่ยนสีของ Marker เป็นสีเขียว
   });
-} else {
-  detectionInfo = "<li>ไม่พบข้อมูลการวิเคราะห์</li>"; // แสดงข้อความกรณีไม่มีข้อมูล
-}
 
-const userInfo = `
-  <div class="overflow-y-auto max-h-52 w-64">
-    <strong>ชื่อผู้ใช้:</strong> ${user.username} <br>
-    <ul>${detectionInfo}</ul> <!-- แสดงข้อมูลทั้งหมดในรูปแบบรายการ -->
-  </div>
-`;
+  // เพิ่ม event listener ให้มาร์คเกอร์ของผู้ใช้
+  marker.addListener("click", () => {
+    const detections = detection_data?.filter((det) => det.uid === user.user_id) || []; // ดึงข้อมูลทั้งหมดที่เกี่ยวข้องกับ user_id
 
-infoWindow.current.setContent(userInfo); // ข้อความที่จะแสดงใน InfoWindow
-infoWindow.current.open(map, marker); // แสดง InfoWindow
+    let detectionInfo = ""; // เก็บข้อมูลระดับความรุนแรงและวันที่ทั้งหมด
+    if (detections.length > 0) {
+      detections.forEach((detection) => {
+        const lvl = severity_lvl[detection.svt_lvl] || "Unknown"; // ใช้ระดับความรุนแรงหรือ "Unknown" หากไม่มีข้อมูล
+        detectionInfo += `
+          <li>
+            <strong>ระดับ:</strong> ${lvl} 
+            <br>
+            <strong>วันที่:</strong> ${new Date(detection.date).toDateString()}
+          </li>
+        `;
+      });
+    } else {
+      detectionInfo = "<li>ไม่พบข้อมูลการวิเคราะห์</li>"; // แสดงข้อความกรณีไม่มีข้อมูล
+    }
 
-          });
-        });
+    const userInfo = `
+      <div class="overflow-y-auto max-h-52 w-64">
+        <strong>ชื่อผู้ใช้:</strong> ${user.username} <br>
+        <ul>${detectionInfo}</ul> <!-- แสดงข้อมูลทั้งหมดในรูปแบบรายการ -->
+      </div>
+    `;
+
+    infoWindow.current.setContent(userInfo); // ข้อความที่จะแสดงใน InfoWindow
+    infoWindow.current.open(map, marker); // แสดง InfoWindow
+  });
+});
+
       }
     }
   }, [usersData, currentUserLocation, detection_data]);
