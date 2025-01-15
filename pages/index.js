@@ -109,30 +109,40 @@ const Home = () => {
           <p className="text-center text-lg md:text-xl">ไม่พบข้อมูลพยากรณ์อากาศ</p>
         ) : (
           <div>
-            {Object.entries(forecast).map(([date, forecasts], index) => (
-              <div key={index} className="mb-6">
-                <h2 className="text-3xl font-bold mb-2 text-white">{formatDate(date)}</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {forecasts.map((item, idx) => (
-                    <div key={idx} className="border rounded-lg p-4 shadow-md text-black bg1">
-                      <p className="text-lg md:text-xl">⏰ เวลา: {item.dt_txt.split(" ")[1]}</p>
-                      <p className="text-lg md:text-xl">🌡️ อุณหภูมิ: {item.main.temp} °C</p>
-                      <p className="text-lg md:text-xl">💧 ความชื้น: {item.main.humidity}%</p>
-                      <p className="text-lg md:text-xl">🌥️ สภาพอากาศ: {item.weather[0].description}</p>
-                      <div className="flex justify-center items-center">
-                        <img
-                          src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}
-                          alt={item.weather[0].description}
-                          className="w-12 h-12"
-                        />
-                      </div>
+        {Object.entries(forecast).map(([date, forecasts], index) => {
+        // หาวันสุดท้ายและกรองออก
+        const lastDate = Object.keys(forecast).length === index + 1;
+          if (lastDate) return null; // ไม่แสดงข้อมูลวันสุดท้าย
+            return (
+          <div key={index} className="mb-6">
+          <h2 className="text-3xl font-bold mb-2 text-white">{formatDate(date)}</h2>
+          <div className="overflow-x-auto">
+            <div className="flex gap-4 w-max">
+              {forecasts.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="border rounded-lg p-4 shadow-md text-black bg1 max-w-[500px] w-[600px]"
+                >
+                  <p className="text-lg md:text-xl">⏰ เวลา: {item.dt_txt.split(" ")[1]}</p>
+                  <p className="text-lg md:text-xl">🌡️ อุณหภูมิ: {item.main.temp} °C</p>
+                  <p className="text-lg md:text-xl">💧 ความชื้น: {item.main.humidity}%</p>
+                  <p className="text-lg md:text-xl">🌥️ สภาพอากาศ: {item.weather[0].description}</p>
+                  <div className="flex justify-center items-center">
+                    <img
+                      src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}
+                      alt={item.weather[0].description}
+                      className="w-12 h-12"
+                      />
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
-        )}
+          );
+        })}
+        </div>
+      )}
       </div>
     </>
   );
