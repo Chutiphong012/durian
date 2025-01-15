@@ -86,7 +86,7 @@ const Home = () => {
                 <p className="text-center text-lg md:text-xl">กำลังโหลดข้อมูลสภาพอากาศขณะนี้...</p>
               ) : currentWeather && currentWeather.main ? (
                 <div className="mb-6 text-black">
-                  <h1 className="text-6xl text-white">อากาศ{currentWeather.name}วันนี้ ➣ </h1>
+                  <h1 className="text-6xl text-white">อากาศ{province}วันนี้ ➣ </h1>
                 </div>
               ) : (
                 <p className="text-center text-lg md:text-xl">ไม่พบข้อมูลสภาพอากาศขณะนี้</p>
@@ -100,7 +100,7 @@ const Home = () => {
               ) : currentWeather && currentWeather.main ? (
                 <div className="mb-6 border rounded-lg p-4 shadow-md text-black bg1 max-w-md mx-auto">
                   <h2 className="text-xl font-bold mb-2">สภาพอากาศขณะนี้</h2>
-                  <p className="text-lg md:text-xl">🚩 จังหวัด: {currentWeather.name}</p>
+                  <p className="text-lg md:text-xl">🚩 จังหวัด: {province}</p>
                   <p className="text-lg md:text-xl">🌡️ อุณหภูมิ: {currentWeather.main.temp} °C</p>
                   <p className="text-lg md:text-xl">💧 ความชื้น: {currentWeather.main.humidity}%</p>
                   <p className="text-lg md:text-xl">🌥️ สภาพอากาศ: {currentWeather.weather[0].description}</p>
