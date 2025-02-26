@@ -1,0 +1,3434 @@
+Received JSON: 
+Received JSON: {"startDate":"2025-01-13","endDate":"2025-02-01"}
+Start Date: 2025-01-13, End Date: 2025-02-01
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-01-31 11:48:19
+            [latitude_detec] => 9.09477
+            [longitude_detec] => 99.357
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-01-17 03:06:11
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [2] => Array
+        (
+            [date] => 2025-01-14 20:49:16
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [3] => Array
+        (
+            [date] => 2025-01-14 20:42:38
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [4] => Array
+        (
+            [date] => 2025-01-13 22:52:40
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [5] => Array
+        (
+            [date] => 2025-01-14 20:49:35
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [6] => Array
+        (
+            [date] => 2025-01-14 20:42:50
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [7] => Array
+        (
+            [date] => 2025-01-13 20:19:40
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [8] => Array
+        (
+            [date] => 2025-01-13 20:19:33
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [9] => Array
+        (
+            [date] => 2025-01-13 16:42:36
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [10] => Array
+        (
+            [date] => 2025-01-14 20:49:22
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [11] => Array
+        (
+            [date] => 2025-01-13 22:57:44
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [12] => Array
+        (
+            [date] => 2025-01-13 22:18:58
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [13] => Array
+        (
+            [date] => 2025-01-13 20:19:36
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-13","endDate":"2025-02-03"}
+Start Date: 2025-01-13, End Date: 2025-02-03
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-01-31 11:48:19
+            [latitude_detec] => 9.09477
+            [longitude_detec] => 99.357
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-01-17 03:06:11
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [2] => Array
+        (
+            [date] => 2025-01-14 20:49:16
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [3] => Array
+        (
+            [date] => 2025-01-14 20:42:38
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [4] => Array
+        (
+            [date] => 2025-01-13 22:52:40
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [5] => Array
+        (
+            [date] => 2025-01-14 20:49:35
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [6] => Array
+        (
+            [date] => 2025-01-14 20:42:50
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [7] => Array
+        (
+            [date] => 2025-01-13 20:19:40
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [8] => Array
+        (
+            [date] => 2025-01-13 20:19:33
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [9] => Array
+        (
+            [date] => 2025-01-13 16:42:36
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [10] => Array
+        (
+            [date] => 2025-01-14 20:49:22
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [11] => Array
+        (
+            [date] => 2025-01-13 22:57:44
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [12] => Array
+        (
+            [date] => 2025-01-13 22:18:58
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [13] => Array
+        (
+            [date] => 2025-01-13 20:19:36
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+)
+
+Received JSON: {"startDate":"2025-01-13","endDate":"2025-02-03"}
+Start Date: 2025-01-13, End Date: 2025-02-03
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-01-31 11:48:19
+            [latitude_detec] => 9.09477
+            [longitude_detec] => 99.357
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-01-17 03:06:11
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [2] => Array
+        (
+            [date] => 2025-01-14 20:49:16
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [3] => Array
+        (
+            [date] => 2025-01-14 20:42:38
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [4] => Array
+        (
+            [date] => 2025-01-13 22:52:40
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [5] => Array
+        (
+            [date] => 2025-01-14 20:49:35
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [6] => Array
+        (
+            [date] => 2025-01-14 20:42:50
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [7] => Array
+        (
+            [date] => 2025-01-13 20:19:40
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [8] => Array
+        (
+            [date] => 2025-01-13 20:19:33
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [9] => Array
+        (
+            [date] => 2025-01-13 16:42:36
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [10] => Array
+        (
+            [date] => 2025-01-14 20:49:22
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [11] => Array
+        (
+            [date] => 2025-01-13 22:57:44
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [12] => Array
+        (
+            [date] => 2025-01-13 22:18:58
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [13] => Array
+        (
+            [date] => 2025-01-13 20:19:36
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-13","endDate":"2025-02-10"}
+Start Date: 2025-01-13, End Date: 2025-02-10
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-01-31 11:48:19
+            [latitude_detec] => 9.09477
+            [longitude_detec] => 99.357
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-01-17 03:06:11
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [2] => Array
+        (
+            [date] => 2025-01-14 20:49:16
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [3] => Array
+        (
+            [date] => 2025-01-14 20:42:38
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [4] => Array
+        (
+            [date] => 2025-01-13 22:52:40
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [5] => Array
+        (
+            [date] => 2025-01-14 20:49:35
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [6] => Array
+        (
+            [date] => 2025-01-14 20:42:50
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [7] => Array
+        (
+            [date] => 2025-01-13 20:19:40
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [8] => Array
+        (
+            [date] => 2025-01-13 20:19:33
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [9] => Array
+        (
+            [date] => 2025-01-13 16:42:36
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [10] => Array
+        (
+            [date] => 2025-02-06 15:43:53
+            [latitude_detec] => 9.09362
+            [longitude_detec] => 99.3548
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [11] => Array
+        (
+            [date] => 2025-01-14 20:49:22
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [12] => Array
+        (
+            [date] => 2025-01-13 22:57:44
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [13] => Array
+        (
+            [date] => 2025-01-13 22:18:58
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [14] => Array
+        (
+            [date] => 2025-01-13 20:19:36
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-13","endDate":"2025-02-10"}
+Start Date: 2025-01-13, End Date: 2025-02-10
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-02-06 15:43:53
+            [latitude_detec] => 9.09362
+            [longitude_detec] => 99.3548
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-01-14 20:49:22
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [2] => Array
+        (
+            [date] => 2025-01-13 22:57:44
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [3] => Array
+        (
+            [date] => 2025-01-13 22:18:58
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [4] => Array
+        (
+            [date] => 2025-01-13 20:19:36
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [5] => Array
+        (
+            [date] => 2025-01-14 20:49:35
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [6] => Array
+        (
+            [date] => 2025-01-14 20:42:50
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [7] => Array
+        (
+            [date] => 2025-01-13 20:19:40
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [8] => Array
+        (
+            [date] => 2025-01-13 20:19:33
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [9] => Array
+        (
+            [date] => 2025-01-13 16:42:36
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [10] => Array
+        (
+            [date] => 2025-01-31 11:48:19
+            [latitude_detec] => 9.09477
+            [longitude_detec] => 99.357
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [11] => Array
+        (
+            [date] => 2025-01-17 03:06:11
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [12] => Array
+        (
+            [date] => 2025-01-14 20:49:16
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [13] => Array
+        (
+            [date] => 2025-01-14 20:42:38
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [14] => Array
+        (
+            [date] => 2025-01-13 22:52:40
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-13","endDate":"2025-02-10"}
+Start Date: 2025-01-13, End Date: 2025-02-10
+Received JSON: {"startDate":"2025-01-13","endDate":"2025-02-10"}
+Start Date: 2025-01-13, End Date: 2025-02-10
+Received JSON: {"startDate":"2025-01-13","endDate":"2025-02-10"}
+Start Date: 2025-01-13, End Date: 2025-02-10
+Received JSON: 
+Received JSON: {"startDate":"2025-01-13","endDate":"2025-02-10"}
+Start Date: 2025-01-13, End Date: 2025-02-10
+Received JSON: {"startDate":"2025-01-13","endDate":"2025-02-10"}
+Start Date: 2025-01-13, End Date: 2025-02-10
+Received JSON: 
+Received JSON: {"startDate":"2025-01-13","endDate":"2025-02-10"}
+Start Date: 2025-01-13, End Date: 2025-02-10
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-02-06 15:43:53
+            [latitude_detec] => 9.09362
+            [longitude_detec] => 99.3548
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-01-31 11:48:19
+            [latitude_detec] => 9.09477
+            [longitude_detec] => 99.357
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [2] => Array
+        (
+            [date] => 2025-01-17 03:06:11
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [3] => Array
+        (
+            [date] => 2025-01-14 20:49:35
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [4] => Array
+        (
+            [date] => 2025-01-14 20:49:22
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [5] => Array
+        (
+            [date] => 2025-01-14 20:49:16
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [6] => Array
+        (
+            [date] => 2025-01-14 20:42:50
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [7] => Array
+        (
+            [date] => 2025-01-14 20:42:38
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [8] => Array
+        (
+            [date] => 2025-01-13 22:57:44
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [9] => Array
+        (
+            [date] => 2025-01-13 22:52:40
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [10] => Array
+        (
+            [date] => 2025-01-13 22:18:58
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [11] => Array
+        (
+            [date] => 2025-01-13 20:19:40
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [12] => Array
+        (
+            [date] => 2025-01-13 20:19:36
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [13] => Array
+        (
+            [date] => 2025-01-13 20:19:33
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [14] => Array
+        (
+            [date] => 2025-01-13 16:42:36
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-13","endDate":"2025-02-06"}
+Start Date: 2025-01-13, End Date: 2025-02-06
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-01-31 11:48:19
+            [latitude_detec] => 9.09477
+            [longitude_detec] => 99.357
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-01-17 03:06:11
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [2] => Array
+        (
+            [date] => 2025-01-14 20:49:35
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [3] => Array
+        (
+            [date] => 2025-01-14 20:49:22
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [4] => Array
+        (
+            [date] => 2025-01-14 20:49:16
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [5] => Array
+        (
+            [date] => 2025-01-14 20:42:50
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [6] => Array
+        (
+            [date] => 2025-01-14 20:42:38
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [7] => Array
+        (
+            [date] => 2025-01-13 22:57:44
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [8] => Array
+        (
+            [date] => 2025-01-13 22:52:40
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+        )
+
+    [9] => Array
+        (
+            [date] => 2025-01-13 22:18:58
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [10] => Array
+        (
+            [date] => 2025-01-13 20:19:40
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [11] => Array
+        (
+            [date] => 2025-01-13 20:19:36
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+        )
+
+    [12] => Array
+        (
+            [date] => 2025-01-13 20:19:33
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+    [13] => Array
+        (
+            [date] => 2025-01-13 16:42:36
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-13","endDate":"2025-02-06"}
+Start Date: 2025-01-13, End Date: 2025-02-06
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-01-31 11:48:19
+            [latitude_detec] => 9.09477
+            [longitude_detec] => 99.357
+            [svt_lvl] => ระยะเริ่มต้น
+            [username] => test3
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-01-17 03:06:11
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+            [username] => test3
+        )
+
+    [2] => Array
+        (
+            [date] => 2025-01-14 20:49:35
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+            [username] => 
+        )
+
+    [3] => Array
+        (
+            [date] => 2025-01-14 20:49:22
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+            [username] => 
+        )
+
+    [4] => Array
+        (
+            [date] => 2025-01-14 20:49:16
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+            [username] => 
+        )
+
+    [5] => Array
+        (
+            [date] => 2025-01-14 20:42:50
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+            [username] => 
+        )
+
+    [6] => Array
+        (
+            [date] => 2025-01-14 20:42:38
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+            [username] => 
+        )
+
+    [7] => Array
+        (
+            [date] => 2025-01-13 22:57:44
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+            [username] => 
+        )
+
+    [8] => Array
+        (
+            [date] => 2025-01-13 22:52:40
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+            [username] => 
+        )
+
+    [9] => Array
+        (
+            [date] => 2025-01-13 22:18:58
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+            [username] => 
+        )
+
+    [10] => Array
+        (
+            [date] => 2025-01-13 20:19:40
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+            [username] => 
+        )
+
+    [11] => Array
+        (
+            [date] => 2025-01-13 20:19:36
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+            [username] => 
+        )
+
+    [12] => Array
+        (
+            [date] => 2025-01-13 20:19:33
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+            [username] => 
+        )
+
+    [13] => Array
+        (
+            [date] => 2025-01-13 16:42:36
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+            [username] => 
+        )
+
+)
+
+Received JSON: {"startDate":"2025-01-13","endDate":"2025-02-06"}
+Start Date: 2025-01-13, End Date: 2025-02-06
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-01-31 11:48:19
+            [latitude_detec] => 9.09477
+            [longitude_detec] => 99.357
+            [svt_lvl] => ระยะเริ่มต้น
+            [username] => test3
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-01-17 03:06:11
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+            [username] => test3
+        )
+
+    [2] => Array
+        (
+            [date] => 2025-01-14 20:49:35
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+            [username] => 
+        )
+
+    [3] => Array
+        (
+            [date] => 2025-01-14 20:49:22
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+            [username] => 
+        )
+
+    [4] => Array
+        (
+            [date] => 2025-01-14 20:49:16
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+            [username] => 
+        )
+
+    [5] => Array
+        (
+            [date] => 2025-01-14 20:42:50
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+            [username] => 
+        )
+
+    [6] => Array
+        (
+            [date] => 2025-01-14 20:42:38
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+            [username] => 
+        )
+
+    [7] => Array
+        (
+            [date] => 2025-01-13 22:57:44
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+            [username] => 
+        )
+
+    [8] => Array
+        (
+            [date] => 2025-01-13 22:52:40
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+            [username] => 
+        )
+
+    [9] => Array
+        (
+            [date] => 2025-01-13 22:18:58
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+            [username] => 
+        )
+
+    [10] => Array
+        (
+            [date] => 2025-01-13 20:19:40
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+            [username] => 
+        )
+
+    [11] => Array
+        (
+            [date] => 2025-01-13 20:19:36
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+            [username] => 
+        )
+
+    [12] => Array
+        (
+            [date] => 2025-01-13 20:19:33
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+            [username] => 
+        )
+
+    [13] => Array
+        (
+            [date] => 2025-01-13 16:42:36
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+            [username] => 
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-13","endDate":"2025-02-07"}
+Start Date: 2025-01-13, End Date: 2025-02-07
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-02-06 15:43:53
+            [latitude_detec] => 9.09362
+            [longitude_detec] => 99.3548
+            [svt_lvl] => ระยะกลาง
+            [username] => 
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-01-31 11:48:19
+            [latitude_detec] => 9.09477
+            [longitude_detec] => 99.357
+            [svt_lvl] => ระยะเริ่มต้น
+            [username] => test3
+        )
+
+    [2] => Array
+        (
+            [date] => 2025-01-17 03:06:11
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+            [username] => test3
+        )
+
+    [3] => Array
+        (
+            [date] => 2025-01-14 20:49:35
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+            [username] => 
+        )
+
+    [4] => Array
+        (
+            [date] => 2025-01-14 20:49:22
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+            [username] => 
+        )
+
+    [5] => Array
+        (
+            [date] => 2025-01-14 20:49:16
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+            [username] => 
+        )
+
+    [6] => Array
+        (
+            [date] => 2025-01-14 20:42:50
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+            [username] => 
+        )
+
+    [7] => Array
+        (
+            [date] => 2025-01-14 20:42:38
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+            [username] => 
+        )
+
+    [8] => Array
+        (
+            [date] => 2025-01-13 22:57:44
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+            [username] => 
+        )
+
+    [9] => Array
+        (
+            [date] => 2025-01-13 22:52:40
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะเริ่มต้น
+            [username] => 
+        )
+
+    [10] => Array
+        (
+            [date] => 2025-01-13 22:18:58
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+            [username] => 
+        )
+
+    [11] => Array
+        (
+            [date] => 2025-01-13 20:19:40
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+            [username] => 
+        )
+
+    [12] => Array
+        (
+            [date] => 2025-01-13 20:19:36
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+            [username] => 
+        )
+
+    [13] => Array
+        (
+            [date] => 2025-01-13 20:19:33
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+            [username] => 
+        )
+
+    [14] => Array
+        (
+            [date] => 2025-01-13 16:42:36
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะรุนแรง
+            [username] => 
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-27","endDate":"2025-02-07"}
+Start Date: 2025-01-27, End Date: 2025-02-07
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-02-06 15:43:53
+            [latitude_detec] => 9.09362
+            [longitude_detec] => 99.3548
+            [svt_lvl] => ระยะกลาง
+            [username] => 
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-01-31 11:48:19
+            [latitude_detec] => 9.09477
+            [longitude_detec] => 99.357
+            [svt_lvl] => ระยะเริ่มต้น
+            [username] => test3
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-29","endDate":"2025-02-07"}
+Start Date: 2025-01-29, End Date: 2025-02-07
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-02-06 15:43:53
+            [latitude_detec] => 9.09362
+            [longitude_detec] => 99.3548
+            [svt_lvl] => ระยะกลาง
+            [username] => 
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-01-31 11:48:19
+            [latitude_detec] => 9.09477
+            [longitude_detec] => 99.357
+            [svt_lvl] => ระยะเริ่มต้น
+            [username] => test3
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-29","endDate":"2025-02-07"}
+Start Date: 2025-01-29, End Date: 2025-02-07
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-02-06 15:43:53
+            [latitude_detec] => 9.09362
+            [longitude_detec] => 99.3548
+            [svt_lvl] => ระยะกลาง
+            [username] => 
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-01-31 11:48:19
+            [latitude_detec] => 9.09477
+            [longitude_detec] => 99.357
+            [svt_lvl] => ระยะเริ่มต้น
+            [username] => test3
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-02-10","endDate":"2025-01-27","province":"Phuket"}
+Start Date: 2025-02-10, End Date: 2025-01-27
+Fetched Data: Array
+(
+)
+
+Received JSON: {"startDate":"2025-02-10","endDate":"2025-01-27","province":"Phuket"}
+Start Date: 2025-02-10, End Date: 2025-01-27
+Fetched Data: Array
+(
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-28","endDate":"2025-02-07"}
+Start Date: 2025-01-28, End Date: 2025-02-07
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-02-06 15:43:53
+            [latitude_detec] => 9.09362
+            [longitude_detec] => 99.3548
+            [svt_lvl] => ระยะกลาง
+            [username] => 
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-01-31 11:48:19
+            [latitude_detec] => 9.09477
+            [longitude_detec] => 99.357
+            [svt_lvl] => ระยะเริ่มต้น
+            [username] => test3
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-01","endDate":"2025-01-12"}
+Start Date: 2025-01-01, End Date: 2025-01-12
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-01-10 04:12:16
+            [latitude_detec] => 
+            [longitude_detec] => 
+            [svt_lvl] => ระยะกลาง
+            [username] => 
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-02-23","endDate":"2025-02-02"}
+Start Date: 2025-02-23, End Date: 2025-02-02
+Fetched Data: Array
+(
+)
+
+Received JSON: {"startDate":"2025-02-23","endDate":"2025-02-02"}
+Start Date: 2025-02-23, End Date: 2025-02-02
+Fetched Data: Array
+(
+)
+
+Received JSON: {"startDate":"2025-02-23","endDate":"2025-02-02"}
+Start Date: 2025-02-23, End Date: 2025-02-02
+Fetched Data: Array
+(
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-02-23","endDate":"2025-02-02"}
+Start Date: 2025-02-23, End Date: 2025-02-02
+Fetched Data: Array
+(
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-01","endDate":"2025-01-05"}
+Start Date: 2025-01-01, End Date: 2025-01-05
+Fetched Data: Array
+(
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-02-03","endDate":"2025-02-10"}
+Start Date: 2025-02-03, End Date: 2025-02-10
+Fetched Data: Array
+(
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-02-12","endDate":"2025-02-15"}
+Start Date: 2025-02-12, End Date: 2025-02-15
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-02-14 02:58:12
+            [latitude_detec] => 7.90705
+            [longitude_detec] => 98.3862
+            [svt_lvl] => Intermediate stage
+            [username] => นายก.
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-02-14 02:50:45
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Severe stage
+            [username] => นายก.
+        )
+
+    [2] => Array
+        (
+            [date] => 2025-02-14 02:47:35
+            [latitude_detec] => 7.9075
+            [longitude_detec] => 98.3845
+            [svt_lvl] => Early stage
+            [username] => นายก.
+        )
+
+    [3] => Array
+        (
+            [date] => 2025-02-14 02:46:22
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => นายก.
+        )
+
+    [4] => Array
+        (
+            [date] => 2025-02-14 02:45:16
+            [latitude_detec] => 7.90651
+            [longitude_detec] => 98.3875
+            [svt_lvl] => Intermediate stage
+            [username] => นายก.
+        )
+
+    [5] => Array
+        (
+            [date] => 2025-02-14 02:41:48
+            [latitude_detec] => 7.90641
+            [longitude_detec] => 98.3854
+            [svt_lvl] => Intermediate stage
+            [username] => นายก.
+        )
+
+    [6] => Array
+        (
+            [date] => 2025-02-14 02:36:10
+            [latitude_detec] => 7.90743
+            [longitude_detec] => 98.3853
+            [svt_lvl] => Intermediate stage
+            [username] => นายก.
+        )
+
+    [7] => Array
+        (
+            [date] => 2025-02-14 02:27:32
+            [latitude_detec] => 9.07477
+            [longitude_detec] => 99.3506
+            [svt_lvl] => Early stage
+            [username] => นายก.
+        )
+
+    [8] => Array
+        (
+            [date] => 2025-02-14 02:25:24
+            [latitude_detec] => 7.90743
+            [longitude_detec] => 98.3854
+            [svt_lvl] => Intermediate stage
+            [username] => นายก.
+        )
+
+    [9] => Array
+        (
+            [date] => 2025-02-14 02:22:55
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => นายก.
+        )
+
+    [10] => Array
+        (
+            [date] => 2025-02-14 02:21:42
+            [latitude_detec] => 9.07499
+            [longitude_detec] => 99.3506
+            [svt_lvl] => Severe stage
+            [username] => นายก.
+        )
+
+    [11] => Array
+        (
+            [date] => 2025-02-13 23:37:24
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [12] => Array
+        (
+            [date] => 2025-02-13 23:36:00
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [13] => Array
+        (
+            [date] => 2025-02-13 22:17:57
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [14] => Array
+        (
+            [date] => 2025-02-13 21:53:01
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [15] => Array
+        (
+            [date] => 2025-02-13 21:52:14
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-26","endDate":"2025-01-28"}
+Start Date: 2025-01-26, End Date: 2025-01-28
+Fetched Data: Array
+(
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-28","endDate":"2025-02-02"}
+Start Date: 2025-01-28, End Date: 2025-02-02
+Fetched Data: Array
+(
+)
+
+Received JSON: {"startDate":"2025-01-28","endDate":"2025-02-02"}
+Start Date: 2025-01-28, End Date: 2025-02-02
+Fetched Data: Array
+(
+)
+
+Received JSON: {"startDate":"2025-01-28","endDate":"2025-02-02"}
+Start Date: 2025-01-28, End Date: 2025-02-02
+Fetched Data: Array
+(
+)
+
+Received JSON: {"startDate":"2025-01-28","endDate":"2025-02-02"}
+Start Date: 2025-01-28, End Date: 2025-02-02
+Fetched Data: Array
+(
+)
+
+Received JSON: {"startDate":"2025-01-28","endDate":"2025-02-02"}
+Start Date: 2025-01-28, End Date: 2025-02-02
+Fetched Data: Array
+(
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-28","endDate":"2025-02-02"}
+Start Date: 2025-01-28, End Date: 2025-02-02
+Fetched Data: Array
+(
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-02-14","endDate":"2025-02-12"}
+Start Date: 2025-02-14, End Date: 2025-02-12
+Fetched Data: Array
+(
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-02-12","endDate":"2025-02-14"}
+Start Date: 2025-02-12, End Date: 2025-02-14
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-02-13 23:37:24
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-02-13 23:36:00
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [2] => Array
+        (
+            [date] => 2025-02-13 22:17:57
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [3] => Array
+        (
+            [date] => 2025-02-13 21:53:01
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [4] => Array
+        (
+            [date] => 2025-02-13 21:52:14
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-28","endDate":"2025-01-30"}
+Start Date: 2025-01-28, End Date: 2025-01-30
+Fetched Data: Array
+(
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-28","endDate":"2025-01-30"}
+Start Date: 2025-01-28, End Date: 2025-01-30
+Fetched Data: Array
+(
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-28","endDate":"2025-01-29"}
+Start Date: 2025-01-28, End Date: 2025-01-29
+Fetched Data: Array
+(
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-02-06","endDate":"2025-02-08"}
+Start Date: 2025-02-06, End Date: 2025-02-08
+Fetched Data: Array
+(
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-02-13","endDate":"2025-02-14"}
+Start Date: 2025-02-13, End Date: 2025-02-14
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-02-13 23:37:24
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-02-13 23:36:00
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [2] => Array
+        (
+            [date] => 2025-02-13 22:17:57
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [3] => Array
+        (
+            [date] => 2025-02-13 21:53:01
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [4] => Array
+        (
+            [date] => 2025-02-13 21:52:14
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-29","endDate":"2025-01-30"}
+Start Date: 2025-01-29, End Date: 2025-01-30
+Fetched Data: Array
+(
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-30","endDate":"2025-02-01"}
+Start Date: 2025-01-30, End Date: 2025-02-01
+Fetched Data: Array
+(
+)
+
+Received JSON: {"startDate":"2025-01-30","endDate":"2025-02-01"}
+Start Date: 2025-01-30, End Date: 2025-02-01
+Fetched Data: Array
+(
+)
+
+Received JSON: {"startDate":"2025-01-30","endDate":"2025-02-01"}
+Start Date: 2025-01-30, End Date: 2025-02-01
+Fetched Data: Array
+(
+)
+
+Received JSON: {"startDate":"2025-01-30","endDate":"2025-02-01"}
+Start Date: 2025-01-30, End Date: 2025-02-01
+Fetched Data: Array
+(
+)
+
+Received JSON: {"startDate":"2025-01-30","endDate":"2025-02-01"}
+Start Date: 2025-01-30, End Date: 2025-02-01
+Fetched Data: Array
+(
+)
+
+Received JSON: {"startDate":"2025-01-30","endDate":"2025-02-01"}
+Start Date: 2025-01-30, End Date: 2025-02-01
+Fetched Data: Array
+(
+)
+
+Received JSON: {"startDate":"2025-01-30","endDate":"2025-02-01"}
+Start Date: 2025-01-30, End Date: 2025-02-01
+Fetched Data: Array
+(
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-31","endDate":"2025-02-01"}
+Start Date: 2025-01-31, End Date: 2025-02-01
+Fetched Data: Array
+(
+)
+
+Received JSON: {"startDate":"2025-01-31","endDate":"2025-02-01"}
+Start Date: 2025-01-31, End Date: 2025-02-01
+Fetched Data: Array
+(
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-30","endDate":"2025-02-01"}
+Start Date: 2025-01-30, End Date: 2025-02-01
+Fetched Data: Array
+(
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-30","endDate":"2025-02-01"}
+Start Date: 2025-01-30, End Date: 2025-02-01
+Fetched Data: Array
+(
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-29","endDate":"2025-01-31"}
+Start Date: 2025-01-29, End Date: 2025-01-31
+Fetched Data: Array
+(
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-28","endDate":"2025-01-31"}
+Start Date: 2025-01-28, End Date: 2025-01-31
+Fetched Data: Array
+(
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-01-28","endDate":"2025-01-30"}
+Start Date: 2025-01-28, End Date: 2025-01-30
+Fetched Data: Array
+(
+)
+
+Received JSON: {"startDate":"2025-01-28","endDate":"2025-01-30"}
+Start Date: 2025-01-28, End Date: 2025-01-30
+Fetched Data: Array
+(
+)
+
+Received JSON: {"startDate":"2025-01-28","endDate":"2025-01-30"}
+Start Date: 2025-01-28, End Date: 2025-01-30
+Fetched Data: Array
+(
+)
+
+Received JSON: {"startDate":"2025-01-28","endDate":"2025-01-30"}
+Start Date: 2025-01-28, End Date: 2025-01-30
+Fetched Data: Array
+(
+)
+
+Received JSON: {"startDate":"2025-01-28","endDate":"2025-01-30"}
+Start Date: 2025-01-28, End Date: 2025-01-30
+Fetched Data: Array
+(
+)
+
+Received JSON: {"startDate":"2025-01-28","endDate":"2025-01-30"}
+Start Date: 2025-01-28, End Date: 2025-01-30
+Fetched Data: Array
+(
+)
+
+Received JSON: {"startDate":"2025-01-28","endDate":"2025-01-30"}
+Start Date: 2025-01-28, End Date: 2025-01-30
+Fetched Data: Array
+(
+)
+
+Received JSON: {"startDate":"2025-01-28","endDate":"2025-01-30"}
+Start Date: 2025-01-28, End Date: 2025-01-30
+Fetched Data: Array
+(
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-02-13","endDate":"2025-02-14"}
+Start Date: 2025-02-13, End Date: 2025-02-14
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-02-13 23:37:24
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-02-13 23:36:00
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [2] => Array
+        (
+            [date] => 2025-02-13 22:17:57
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [3] => Array
+        (
+            [date] => 2025-02-13 21:53:01
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [4] => Array
+        (
+            [date] => 2025-02-13 21:52:14
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-02-13","endDate":"2025-02-14"}
+Start Date: 2025-02-13, End Date: 2025-02-14
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-02-13 23:37:24
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-02-13 23:36:00
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [2] => Array
+        (
+            [date] => 2025-02-13 22:17:57
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [3] => Array
+        (
+            [date] => 2025-02-13 21:53:01
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [4] => Array
+        (
+            [date] => 2025-02-13 21:52:14
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-02-12","endDate":"2025-02-15"}
+Start Date: 2025-02-12, End Date: 2025-02-15
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-02-14 03:24:38
+            [latitude_detec] => 7.90705
+            [longitude_detec] => 98.3862
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-02-14 03:24:34
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+    [2] => Array
+        (
+            [date] => 2025-02-14 03:24:29
+            [latitude_detec] => 7.9075
+            [longitude_detec] => 98.3845
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [3] => Array
+        (
+            [date] => 2025-02-14 03:24:16
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [4] => Array
+        (
+            [date] => 2025-02-14 03:24:10
+            [latitude_detec] => 7.90651
+            [longitude_detec] => 98.3875
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [5] => Array
+        (
+            [date] => 2025-02-14 03:24:05
+            [latitude_detec] => 7.90641
+            [longitude_detec] => 98.3854
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [6] => Array
+        (
+            [date] => 2025-02-14 03:23:59
+            [latitude_detec] => 7.90743
+            [longitude_detec] => 98.3853
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [7] => Array
+        (
+            [date] => 2025-02-14 03:23:54
+            [latitude_detec] => 9.07477
+            [longitude_detec] => 99.3506
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [8] => Array
+        (
+            [date] => 2025-02-14 03:23:48
+            [latitude_detec] => 7.90743
+            [longitude_detec] => 98.3854
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [9] => Array
+        (
+            [date] => 2025-02-14 03:23:42
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [10] => Array
+        (
+            [date] => 2025-02-14 03:17:24
+            [latitude_detec] => 9.07499
+            [longitude_detec] => 99.3506
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+    [11] => Array
+        (
+            [date] => 2025-02-13 23:37:24
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [12] => Array
+        (
+            [date] => 2025-02-13 23:36:00
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [13] => Array
+        (
+            [date] => 2025-02-13 22:17:57
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [14] => Array
+        (
+            [date] => 2025-02-13 21:53:01
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [15] => Array
+        (
+            [date] => 2025-02-13 21:52:14
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-02-12","endDate":"2025-02-15"}
+Start Date: 2025-02-12, End Date: 2025-02-15
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-02-14 03:24:38
+            [latitude_detec] => 7.90705
+            [longitude_detec] => 98.3862
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-02-14 03:24:34
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+    [2] => Array
+        (
+            [date] => 2025-02-14 03:24:29
+            [latitude_detec] => 7.9075
+            [longitude_detec] => 98.3845
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [3] => Array
+        (
+            [date] => 2025-02-14 03:24:16
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [4] => Array
+        (
+            [date] => 2025-02-14 03:24:10
+            [latitude_detec] => 7.90651
+            [longitude_detec] => 98.3875
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [5] => Array
+        (
+            [date] => 2025-02-14 03:24:05
+            [latitude_detec] => 7.90641
+            [longitude_detec] => 98.3854
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [6] => Array
+        (
+            [date] => 2025-02-14 03:23:59
+            [latitude_detec] => 7.90743
+            [longitude_detec] => 98.3853
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [7] => Array
+        (
+            [date] => 2025-02-14 03:23:54
+            [latitude_detec] => 9.07477
+            [longitude_detec] => 99.3506
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [8] => Array
+        (
+            [date] => 2025-02-14 03:23:48
+            [latitude_detec] => 7.90743
+            [longitude_detec] => 98.3854
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [9] => Array
+        (
+            [date] => 2025-02-14 03:23:42
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [10] => Array
+        (
+            [date] => 2025-02-14 03:17:24
+            [latitude_detec] => 9.07499
+            [longitude_detec] => 99.3506
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+    [11] => Array
+        (
+            [date] => 2025-02-13 23:37:24
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [12] => Array
+        (
+            [date] => 2025-02-13 23:36:00
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [13] => Array
+        (
+            [date] => 2025-02-13 22:17:57
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [14] => Array
+        (
+            [date] => 2025-02-13 21:53:01
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [15] => Array
+        (
+            [date] => 2025-02-13 21:52:14
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-02-05","endDate":"2025-02-15"}
+Start Date: 2025-02-05, End Date: 2025-02-15
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-02-14 03:24:38
+            [latitude_detec] => 7.90705
+            [longitude_detec] => 98.3862
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-02-14 03:24:34
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+    [2] => Array
+        (
+            [date] => 2025-02-14 03:24:29
+            [latitude_detec] => 7.9075
+            [longitude_detec] => 98.3845
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [3] => Array
+        (
+            [date] => 2025-02-14 03:24:16
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [4] => Array
+        (
+            [date] => 2025-02-14 03:24:10
+            [latitude_detec] => 7.90651
+            [longitude_detec] => 98.3875
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [5] => Array
+        (
+            [date] => 2025-02-14 03:24:05
+            [latitude_detec] => 7.90641
+            [longitude_detec] => 98.3854
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [6] => Array
+        (
+            [date] => 2025-02-14 03:23:59
+            [latitude_detec] => 7.90743
+            [longitude_detec] => 98.3853
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [7] => Array
+        (
+            [date] => 2025-02-14 03:23:54
+            [latitude_detec] => 9.07477
+            [longitude_detec] => 99.3506
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [8] => Array
+        (
+            [date] => 2025-02-14 03:23:48
+            [latitude_detec] => 7.90743
+            [longitude_detec] => 98.3854
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [9] => Array
+        (
+            [date] => 2025-02-14 03:23:42
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [10] => Array
+        (
+            [date] => 2025-02-14 03:17:24
+            [latitude_detec] => 9.07499
+            [longitude_detec] => 99.3506
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+    [11] => Array
+        (
+            [date] => 2025-02-13 23:37:24
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [12] => Array
+        (
+            [date] => 2025-02-13 23:36:00
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [13] => Array
+        (
+            [date] => 2025-02-13 22:17:57
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [14] => Array
+        (
+            [date] => 2025-02-13 21:53:01
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [15] => Array
+        (
+            [date] => 2025-02-13 21:52:14
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-02-12","endDate":"2025-02-15"}
+Start Date: 2025-02-12, End Date: 2025-02-15
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-02-14 03:24:38
+            [latitude_detec] => 7.90705
+            [longitude_detec] => 98.3862
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-02-14 03:24:34
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+    [2] => Array
+        (
+            [date] => 2025-02-14 03:24:29
+            [latitude_detec] => 7.9075
+            [longitude_detec] => 98.3845
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [3] => Array
+        (
+            [date] => 2025-02-14 03:24:16
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [4] => Array
+        (
+            [date] => 2025-02-14 03:24:10
+            [latitude_detec] => 7.90651
+            [longitude_detec] => 98.3875
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [5] => Array
+        (
+            [date] => 2025-02-14 03:24:05
+            [latitude_detec] => 7.90641
+            [longitude_detec] => 98.3854
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [6] => Array
+        (
+            [date] => 2025-02-14 03:23:59
+            [latitude_detec] => 7.90743
+            [longitude_detec] => 98.3853
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [7] => Array
+        (
+            [date] => 2025-02-14 03:23:54
+            [latitude_detec] => 9.07477
+            [longitude_detec] => 99.3506
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [8] => Array
+        (
+            [date] => 2025-02-14 03:23:48
+            [latitude_detec] => 7.90743
+            [longitude_detec] => 98.3854
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [9] => Array
+        (
+            [date] => 2025-02-14 03:23:42
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [10] => Array
+        (
+            [date] => 2025-02-14 03:17:24
+            [latitude_detec] => 9.07499
+            [longitude_detec] => 99.3506
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+    [11] => Array
+        (
+            [date] => 2025-02-13 23:37:24
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [12] => Array
+        (
+            [date] => 2025-02-13 23:36:00
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [13] => Array
+        (
+            [date] => 2025-02-13 22:17:57
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [14] => Array
+        (
+            [date] => 2025-02-13 21:53:01
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [15] => Array
+        (
+            [date] => 2025-02-13 21:52:14
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+)
+
+Received JSON: {"startDate":"2025-02-12","endDate":"2025-02-15"}
+Start Date: 2025-02-12, End Date: 2025-02-15
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-02-14 03:24:38
+            [latitude_detec] => 7.90705
+            [longitude_detec] => 98.3862
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-02-14 03:24:34
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+    [2] => Array
+        (
+            [date] => 2025-02-14 03:24:29
+            [latitude_detec] => 7.9075
+            [longitude_detec] => 98.3845
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [3] => Array
+        (
+            [date] => 2025-02-14 03:24:16
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [4] => Array
+        (
+            [date] => 2025-02-14 03:24:10
+            [latitude_detec] => 7.90651
+            [longitude_detec] => 98.3875
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [5] => Array
+        (
+            [date] => 2025-02-14 03:24:05
+            [latitude_detec] => 7.90641
+            [longitude_detec] => 98.3854
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [6] => Array
+        (
+            [date] => 2025-02-14 03:23:59
+            [latitude_detec] => 7.90743
+            [longitude_detec] => 98.3853
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [7] => Array
+        (
+            [date] => 2025-02-14 03:23:54
+            [latitude_detec] => 9.07477
+            [longitude_detec] => 99.3506
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [8] => Array
+        (
+            [date] => 2025-02-14 03:23:48
+            [latitude_detec] => 7.90743
+            [longitude_detec] => 98.3854
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [9] => Array
+        (
+            [date] => 2025-02-14 03:23:42
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [10] => Array
+        (
+            [date] => 2025-02-14 03:17:24
+            [latitude_detec] => 9.07499
+            [longitude_detec] => 99.3506
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+    [11] => Array
+        (
+            [date] => 2025-02-13 23:37:24
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [12] => Array
+        (
+            [date] => 2025-02-13 23:36:00
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [13] => Array
+        (
+            [date] => 2025-02-13 22:17:57
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [14] => Array
+        (
+            [date] => 2025-02-13 21:53:01
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [15] => Array
+        (
+            [date] => 2025-02-13 21:52:14
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+)
+
+Received JSON: {"startDate":"2025-02-12","endDate":"2025-02-15"}
+Start Date: 2025-02-12, End Date: 2025-02-15
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-02-14 03:24:38
+            [latitude_detec] => 7.90705
+            [longitude_detec] => 98.3862
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-02-14 03:24:34
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+    [2] => Array
+        (
+            [date] => 2025-02-14 03:24:29
+            [latitude_detec] => 7.9075
+            [longitude_detec] => 98.3845
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [3] => Array
+        (
+            [date] => 2025-02-14 03:24:16
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [4] => Array
+        (
+            [date] => 2025-02-14 03:24:10
+            [latitude_detec] => 7.90651
+            [longitude_detec] => 98.3875
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [5] => Array
+        (
+            [date] => 2025-02-14 03:24:05
+            [latitude_detec] => 7.90641
+            [longitude_detec] => 98.3854
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [6] => Array
+        (
+            [date] => 2025-02-14 03:23:59
+            [latitude_detec] => 7.90743
+            [longitude_detec] => 98.3853
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [7] => Array
+        (
+            [date] => 2025-02-14 03:23:54
+            [latitude_detec] => 9.07477
+            [longitude_detec] => 99.3506
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [8] => Array
+        (
+            [date] => 2025-02-14 03:23:48
+            [latitude_detec] => 7.90743
+            [longitude_detec] => 98.3854
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [9] => Array
+        (
+            [date] => 2025-02-14 03:23:42
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [10] => Array
+        (
+            [date] => 2025-02-14 03:17:24
+            [latitude_detec] => 9.07499
+            [longitude_detec] => 99.3506
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+    [11] => Array
+        (
+            [date] => 2025-02-13 23:37:24
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [12] => Array
+        (
+            [date] => 2025-02-13 23:36:00
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [13] => Array
+        (
+            [date] => 2025-02-13 22:17:57
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [14] => Array
+        (
+            [date] => 2025-02-13 21:53:01
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [15] => Array
+        (
+            [date] => 2025-02-13 21:52:14
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-02-12","endDate":"2025-02-15"}
+Start Date: 2025-02-12, End Date: 2025-02-15
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-02-14 03:24:38
+            [latitude_detec] => 7.90705
+            [longitude_detec] => 98.3862
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-02-14 03:24:34
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+    [2] => Array
+        (
+            [date] => 2025-02-14 03:24:29
+            [latitude_detec] => 7.9075
+            [longitude_detec] => 98.3845
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [3] => Array
+        (
+            [date] => 2025-02-14 03:24:16
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [4] => Array
+        (
+            [date] => 2025-02-14 03:24:10
+            [latitude_detec] => 7.90651
+            [longitude_detec] => 98.3875
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [5] => Array
+        (
+            [date] => 2025-02-14 03:24:05
+            [latitude_detec] => 7.90641
+            [longitude_detec] => 98.3854
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [6] => Array
+        (
+            [date] => 2025-02-14 03:23:59
+            [latitude_detec] => 7.90743
+            [longitude_detec] => 98.3853
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [7] => Array
+        (
+            [date] => 2025-02-14 03:23:54
+            [latitude_detec] => 9.07477
+            [longitude_detec] => 99.3506
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [8] => Array
+        (
+            [date] => 2025-02-14 03:23:48
+            [latitude_detec] => 7.90743
+            [longitude_detec] => 98.3854
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [9] => Array
+        (
+            [date] => 2025-02-14 03:23:42
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [10] => Array
+        (
+            [date] => 2025-02-14 03:17:24
+            [latitude_detec] => 9.07499
+            [longitude_detec] => 99.3506
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+    [11] => Array
+        (
+            [date] => 2025-02-13 23:37:24
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [12] => Array
+        (
+            [date] => 2025-02-13 23:36:00
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [13] => Array
+        (
+            [date] => 2025-02-13 22:17:57
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [14] => Array
+        (
+            [date] => 2025-02-13 21:53:01
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [15] => Array
+        (
+            [date] => 2025-02-13 21:52:14
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-02-11","endDate":"2025-02-15"}
+Start Date: 2025-02-11, End Date: 2025-02-15
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-02-14 03:24:38
+            [latitude_detec] => 7.90705
+            [longitude_detec] => 98.3862
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-02-14 03:24:34
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+    [2] => Array
+        (
+            [date] => 2025-02-14 03:24:29
+            [latitude_detec] => 7.9075
+            [longitude_detec] => 98.3845
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [3] => Array
+        (
+            [date] => 2025-02-14 03:24:16
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [4] => Array
+        (
+            [date] => 2025-02-14 03:24:10
+            [latitude_detec] => 7.90651
+            [longitude_detec] => 98.3875
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [5] => Array
+        (
+            [date] => 2025-02-14 03:24:05
+            [latitude_detec] => 7.90641
+            [longitude_detec] => 98.3854
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [6] => Array
+        (
+            [date] => 2025-02-14 03:23:59
+            [latitude_detec] => 7.90743
+            [longitude_detec] => 98.3853
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [7] => Array
+        (
+            [date] => 2025-02-14 03:23:54
+            [latitude_detec] => 9.07477
+            [longitude_detec] => 99.3506
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [8] => Array
+        (
+            [date] => 2025-02-14 03:23:48
+            [latitude_detec] => 7.90743
+            [longitude_detec] => 98.3854
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [9] => Array
+        (
+            [date] => 2025-02-14 03:23:42
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [10] => Array
+        (
+            [date] => 2025-02-14 03:17:24
+            [latitude_detec] => 9.07499
+            [longitude_detec] => 99.3506
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+    [11] => Array
+        (
+            [date] => 2025-02-13 23:37:24
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [12] => Array
+        (
+            [date] => 2025-02-13 23:36:00
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [13] => Array
+        (
+            [date] => 2025-02-13 22:17:57
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [14] => Array
+        (
+            [date] => 2025-02-13 21:53:01
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [15] => Array
+        (
+            [date] => 2025-02-13 21:52:14
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-02-04","endDate":"2025-02-07"}
+Start Date: 2025-02-04, End Date: 2025-02-07
+Fetched Data: Array
+(
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-02-17","endDate":"2025-02-18"}
+Start Date: 2025-02-17, End Date: 2025-02-18
+Fetched Data: Array
+(
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-02-17","endDate":"2025-02-17"}
+Start Date: 2025-02-17, End Date: 2025-02-17
+Fetched Data: Array
+(
+)
+
+Received JSON: {"startDate":"2025-02-17","endDate":"2025-02-19"}
+Start Date: 2025-02-17, End Date: 2025-02-19
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-02-18 16:56:02
+            [latitude_detec] => 9.09871
+            [longitude_detec] => 99.3569
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+)
+
+Received JSON: 
+Received JSON: {"startDate":"2025-02-12","endDate":"2025-02-20"}
+Start Date: 2025-02-12, End Date: 2025-02-20
+Fetched Data: Array
+(
+    [0] => Array
+        (
+            [date] => 2025-02-18 17:05:32
+            [latitude_detec] => 7.90772
+            [longitude_detec] => 98.3851
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+    [1] => Array
+        (
+            [date] => 2025-02-18 16:56:02
+            [latitude_detec] => 9.09871
+            [longitude_detec] => 99.3569
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [2] => Array
+        (
+            [date] => 2025-02-14 03:24:38
+            [latitude_detec] => 7.90705
+            [longitude_detec] => 98.3862
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [3] => Array
+        (
+            [date] => 2025-02-14 03:24:34
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+    [4] => Array
+        (
+            [date] => 2025-02-14 03:24:29
+            [latitude_detec] => 7.9075
+            [longitude_detec] => 98.3845
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [5] => Array
+        (
+            [date] => 2025-02-14 03:24:16
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [6] => Array
+        (
+            [date] => 2025-02-14 03:24:10
+            [latitude_detec] => 7.90651
+            [longitude_detec] => 98.3875
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [7] => Array
+        (
+            [date] => 2025-02-14 03:24:05
+            [latitude_detec] => 7.90641
+            [longitude_detec] => 98.3854
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [8] => Array
+        (
+            [date] => 2025-02-14 03:23:59
+            [latitude_detec] => 7.90743
+            [longitude_detec] => 98.3853
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [9] => Array
+        (
+            [date] => 2025-02-14 03:23:54
+            [latitude_detec] => 9.07477
+            [longitude_detec] => 99.3506
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [10] => Array
+        (
+            [date] => 2025-02-14 03:23:48
+            [latitude_detec] => 7.90743
+            [longitude_detec] => 98.3854
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [11] => Array
+        (
+            [date] => 2025-02-14 03:23:42
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [12] => Array
+        (
+            [date] => 2025-02-14 03:17:24
+            [latitude_detec] => 9.07499
+            [longitude_detec] => 99.3506
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+    [13] => Array
+        (
+            [date] => 2025-02-13 23:37:24
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [14] => Array
+        (
+            [date] => 2025-02-13 23:36:00
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [15] => Array
+        (
+            [date] => 2025-02-13 22:17:57
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Intermediate stage
+            [username] => farmer1
+        )
+
+    [16] => Array
+        (
+            [date] => 2025-02-13 21:53:01
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Early stage
+            [username] => farmer1
+        )
+
+    [17] => Array
+        (
+            [date] => 2025-02-13 21:52:14
+            [latitude_detec] => 7.90763
+            [longitude_detec] => 98.3855
+            [svt_lvl] => Severe stage
+            [username] => farmer1
+        )
+
+)
+
