@@ -171,7 +171,7 @@ function Map() {
           Durian Epidemic Geospatial Report System
         </h1>
         <h1 className="text-center text-2xl md:text-4xl font-bold py-4 px-4 text-white">
-          Show nearby disease hotspots
+        Show epidemic location
         </h1>
     
 

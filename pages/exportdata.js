@@ -74,7 +74,7 @@ function ExportDetection() {
           Durian Epidemic Geospatial Report System
         </h1>
         <h1 className="text-center text-2xl md:text-4xl font-bold py-4 px-4 text-white">
-          Export Detection Data
+        Export epidemic detection
         </h1>
 
         <div className="mt-6 flex flex-col items-center">
