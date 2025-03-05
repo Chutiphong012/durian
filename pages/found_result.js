@@ -223,7 +223,7 @@ function Analyze() {
         console.log("✅ API Response:", data);
 
         if (data.success) {
-            setTreatment(data.treatment);
+            setTreatment(data.treatment.map(item => item.treatment_methods)); 
             console.log("🎯 Treatment Set:", data.treatment);
         } else {
             toast({
@@ -277,7 +277,7 @@ function Analyze() {
                 
                   <div className="mt-4 text-center">
                     {/* <h3>ตัวอย่างรูปภาพ:</h3> */}
-                    <img src={imagePreview} alt="Uploaded" className="w-full h-auto" />
+                    <img src={imagePreview} alt="Uploaded" className="max-w-[300px] max-h-[300px] mx-auto rounded-lg shadow-md" />
                   </div>
                 
               
@@ -384,9 +384,13 @@ function Analyze() {
               </CardDescription>
             </div>
             <CardContent className="mt-4">
-              <div className="bg-gray-100 p-4 rounded-md">
-                {treatment} {/* แสดงข้อมูลการรักษาที่ดึงมา */}
-              </div>
+            <div className="bg-gray-100 p-4 rounded-md">
+              <ul className="list-disc ml-4">
+                {treatment.map((method, index) => (
+                  <li key={index}>{method}</li>
+                ))}
+              </ul>
+            </div>
             </CardContent>
           </Card>
         )}
